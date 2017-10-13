@@ -19,7 +19,7 @@ here
             <a href="product.html">Produits</a>
             <a href="search.html"><img src="searchlogo.png" id="searchlogo">Recherche</a>
             <a href="login.php" id="login">Authentification</a>
-            <a href="profile.php" id="profile"><!--<?php echo $_SESSION['user']; ?>--> </a>
+            <a href="profile.php" id="profile"><?php if (isset($_SESSION['user'])){ echo $_SESSION['user'];} ?> </a>
         </div>
     </body>
 </html>
