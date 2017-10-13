@@ -99,7 +99,7 @@ font-style: normal;
 [type='text']:focus,[type='password']:focus {
     background-color: #ddd;
     font-family: Arial;
-     font-style: normal;
+    font-style: normal;
 }
 
 form {
@@ -109,6 +109,7 @@ form {
 }
 
 #searchbar {
+    margin-left: 0%;
     width: 250px;
 }
 
@@ -196,5 +197,5 @@ body {
 #ex {
     display: block;
 	margin-top: 10px;
-    margin-left: 34.3%;
+    text-align: center;
 }

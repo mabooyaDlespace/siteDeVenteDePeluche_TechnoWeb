@@ -14,12 +14,12 @@ here
     </head>
     <body>
         <div class="topnav">
-            <img src="logo.png" id="logo" alt="This is the logo of our association" title="Logo of the company" >
+            <img src="logo.png" id="logo" alt="This is the logo of our association" title="Homepage" >
             
             <a href="product.html">Produits</a>
             <a href="search.html"><img src="searchlogo.png" id="searchlogo">Recherche</a>
             <a href="login.php" id="login">Authentification</a>
-            <a href="profile.php" id="profile"><?php echo $_SESSION['user']; ?> </a>
+            <a href="profile.php" id="profile"><!--<?php echo $_SESSION['user']; ?>--> </a>
         </div>
     </body>
 </html>
