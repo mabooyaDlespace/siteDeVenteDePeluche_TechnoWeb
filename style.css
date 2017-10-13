@@ -198,3 +198,7 @@ body {
 	margin-top:10px;
     text-align: center;
 }
+
+#searchbar {
+	width: 185px;
+}
