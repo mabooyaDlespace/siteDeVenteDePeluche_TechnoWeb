@@ -109,7 +109,7 @@ form {
 }
 
 #searchbar {
-    width: 190px;
+    width: 250px;
 }
 
 
@@ -197,8 +197,4 @@ body {
     display: block;
 	margin-top:10px;
     text-align: center;
-}
-
-#searchbar {
-	width: 185px;
 }
