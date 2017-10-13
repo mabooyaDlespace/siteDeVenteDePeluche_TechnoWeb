@@ -62,24 +62,20 @@ font-style: normal;
 }
 
 /* Logo du site */
-//NetBeans > Tools > Options > Miscellaneous > Node.js >
+
 #logo{
-    height: 10px;
-    width: 10px;
-    float: left;
-}
-.logo{
     height: 50px;
     width: 50px;
     float: left;
 }
+
 /* Zones de saisie */
 .pseudoEtMDP{
     font-weight:bold;
     font-family:"3dumbregular";
 }
 
-[type='text']{
+[type='text'],[type='password']{
     width:150px;
    // min-width: 100px;
     height: 35px;
@@ -91,12 +87,11 @@ font-style: normal;
    
     
 }
-[type='text']:focus{
+[type='text']:focus,[type='password']:focus{
     background-color: #ddd;
     font-family: Arial;
      font-style: normal;
 }
-
 form{
     
     text-align: center;
@@ -167,7 +162,7 @@ footer{
     margin-top: 50px;
 /*    padding-top: 2px;
     padding-bottom: 2px;*/
-    padding: 10px
+    padding: 10px;
 }
 
 /* Fond de page */
@@ -180,5 +175,36 @@ body{
 
 #ex{
     display: block;
+	margin-top:10px;
     text-align: center;
+}
+
+#myheader {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	left: 0;
+}
+
+#myfooter {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	left: 0;
+}
+
+body {
+	margin-bottom: 90px;
+}
+
+#searchbar {
+	width: 190px;
+}
+
+#basket {
+	margin-top: 10px;
+}
+
+#addbasket {
+	margin-bottom: 10px;
 }

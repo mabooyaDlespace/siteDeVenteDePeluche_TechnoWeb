@@ -20,7 +20,7 @@
             <label class="pseudoEtMDP"   for="le_pseudonyme">Nom d'utilisateur</label><br>
             <input type="text" placeholder="ex:rObert78" name="le_pseudonyme" id="le_pseudonyme"><br>
             <label class="pseudoEtMDP" for="le_mot_de_passe">Mot de passe</label><br>
-            <input  type="text" placeholder="Mot de passe"name="le_mot_de_passe" id="le_mot_de_passe"><br>
+            <input  type="password" placeholder="Mot de passe"name="le_mot_de_passe" id="le_mot_de_passe"><br>
             <input class="pseudoEtMDP" type="submit" value="Se connecter">
             <!--<input type="submit" value="S'inscrire">-->
         </form>
