@@ -53,6 +53,10 @@ font-style: normal;
     float: right;
 }
 
+#profile{
+    float: right;
+}
+
 /* Image loupe */
 
 #searchlogo{
@@ -92,6 +96,7 @@ font-style: normal;
     font-family: Arial;
      font-style: normal;
 }
+
 form{
     
     text-align: center;
