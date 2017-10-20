@@ -20,8 +20,9 @@
 			$db = connectDB();
 			$sql = 'SELECT * FROM products WHERE productid=\''.$id.'\'';
 			$query = $db->query($sql);
+			$data = $query->fetch();
 			$db = null;
-			return true;
+			return $data;
 		}
 		catch (PDOException $e){
 			echo ('Erreur: ' .$e->getMessage());
