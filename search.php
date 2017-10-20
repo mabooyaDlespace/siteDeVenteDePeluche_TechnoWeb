@@ -7,6 +7,9 @@
         $recherche = $_GET['query'];
         $reponse = rechercher($recherche);
     }
+    if (empty($reponse)){
+         $reponse = afficherToutesLesPeluches();
+    }
 
 ?>
 

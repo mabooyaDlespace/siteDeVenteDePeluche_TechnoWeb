@@ -35,9 +35,22 @@
 			$db = connectDB();
 			$sql = 'INSERT INTO paniers(userid, productid, quantite) VALUES (\''.$userid.'\', \''.$item.'\', \''.$quantite.'\') ';
 			$query = $db->exec($sql);
-			$data = $query->fetch();
 			$db = null;
-			return $data;
+			return true;
+		}
+		catch (PDOException $e){
+			echo ('Erreur: ' .$e->getMessage());
+		}
+	}
+
+	function afficherToutesLesPeluches()
+	{
+		try{
+			$db = connectDB();
+			$sql = 'SELECT * FROM products';
+			$query = $db->query($sql);
+			$db = null;
+			return $query;
 		}
 		catch (PDOException $e){
 			echo ('Erreur: ' .$e->getMessage());
