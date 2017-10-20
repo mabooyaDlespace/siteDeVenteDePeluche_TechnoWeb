@@ -7,10 +7,10 @@
         $id = $_GET['id'];
         $infos = rechercherId($id);
 
-        $name = $donnees['nom_produit'];
-        $desc = $donnees['description'];
-        $price = $donnees['prix'];
-        $image = $donnees['image'];
+        $name = $infos['nom_produit'];
+        $desc = $infos['description'];
+        $price = $infos['prix'];
+        $image = $infos['image'];
     }
 
 ?>
