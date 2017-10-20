@@ -20,6 +20,20 @@
 			$db = connectDB();
 			$sql = 'SELECT * FROM products WHERE productid=\''.$id.'\'';
 			$query = $db->query($sql);
+			$db = null;
+			return true;
+		}
+		catch (PDOException $e){
+			echo ('Erreur: ' .$e->getMessage());
+		}
+	}
+
+	function ajouterAuPanier($item, $quantite)
+	{
+		try{
+			$db = connectDB();
+			$sql = 'INSERT INTO paniers(userid, productid, quantite) VALUES (\''.$userid.'\', \''.$item.'\', \''.$quantite.'\') ';
+			$query = $db->exec($sql);
 			$data = $query->fetch();
 			$db = null;
 			return $data;

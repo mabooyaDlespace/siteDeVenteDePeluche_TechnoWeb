@@ -23,12 +23,6 @@
 		}
 	}
 
-	function deconnexion()
-	{
-		session_destroy();
-		$_SESSION['userid'] = null;
-	}
-
 	function inscription($username, $password)
 	{
 		try{

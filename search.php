@@ -3,7 +3,7 @@
     include('database.php');
     include('store.php');
 
-    if (!empty($_GET['rechercher'])){
+    if (!empty($_GET['search'])){
         $recherche = $_GET['query'];
         $reponse = rechercher($recherche);
     }
@@ -26,20 +26,11 @@
         </script>
     </head>
     <body>
-        <!-- <?php
-            $query = $_GET['query'];
-
-            $bdd = new PDO('mysql:host=localhost; dbname=test_site', 'root', '');
-            $reponse = $bdd->query('SELECT * FROM products WHERE nom_produit LIKE \'%'.$query.'%\'');
-            #$donnees = $reponse->fetch();
-            #$id = $donnees['productid'];
-        ?> -->
-
         <div id="myheader" ></div>
         <form action="" method="get">
 
             <input type="text" placeholder="Tapez le produit à rechercher" name="query" id="searchbar">
-            <input type="submit" value="Rechercher" name="rechercher">
+            <input type="submit" value="Rechercher" name="search">
 
         </form>
         <span id="ex">Exemples : Disney, Pokémon, animal...</span>
@@ -47,9 +38,11 @@
         <table>
             <th>RESULTATS</th>
         <?php #echo('<a href="product.php?id='.$id.'">Resultat</a>');
-                foreach ($reponse as $row) {
-                    # code...
-                    echo('<tr><td><a href="product.php?id='.$row['productid'].'">'.$row['nom_produit'].'</a></td></tr>');
+                if (!empty($reponse)){
+                    foreach ($reponse as $row) {
+                        # code...
+                        echo('<tr><td><a href="product.php?id='.$row['productid'].'">'.$row['nom_produit'].'</a></td></tr>');
+                    }
                 }
          ?>
         </table>
