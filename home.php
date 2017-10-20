@@ -6,6 +6,7 @@
 
 	$name = infosUser($sessionid);
 	$msg = "Bienvenue " .$name;
+	$msgDeco = "";
 
 	if (!empty($_POST['deconnexion'])){
             deconnexion();
