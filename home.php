@@ -4,15 +4,15 @@
 	include('session.php');
 	include('user.php');
 
-	$name = infosUser($sessionid);
+	$deco = "";
+	if (!empty($sessionid)){
+		$name = infosUser($sessionid);
+		$deco = '<div id="lien"><a href="logout.php">Se déconnecter</a></div>';
+	}
+	else{
+		$name = 'visiteur';
+	}
 	$msg = "Bienvenue " .$name;
-	$msgDeco = "";
-
-	if (!empty($_POST['deconnexion'])){
-            deconnexion();
-            $msgDeco = "Vous êtes maintenant déconnecté.";
-            $msg ="";
-    }
 
 ?>
 
@@ -33,9 +33,11 @@
 <body>
 	<div id="myheader" ></div>
 
-	<form action="" method="post">
+	<!-- <form action="" method="post">
 		<input class="pseudoEtMDP" type="submit" value="Se déconnecter" name="deconnexion">
-	</form>
+	</form> -->
+
+	<?php echo $deco ?>
 
 	<form method="post">
             <label class="saisieTexte"   for="username">Nom</label><br>
@@ -48,7 +50,6 @@
 
 
 	<div id="msg"><?php echo $msg ?></div>
-	<div id="msg"><?php echo $msgDeco ?></div>
 
 	<div id="myfooter"></div>
 </body>

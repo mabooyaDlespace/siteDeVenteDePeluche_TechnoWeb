@@ -1,3 +1,9 @@
+<?php
+
+    include('database.php');
+
+?>
+
 <!DOCTYPE html>
 <!--
 here
@@ -10,12 +16,12 @@ here
     </head>
     <body>
         <div class="topnav">
-            <img src="logo.png" id="logo" alt="This is the logo of our association" title="Homepage" >
+            <img src="logo.png" id="logo" alt="This is the logo of our association" title="Logo of the company" >
             
+            <a href="home.php">Accueil</a>
             <a href="product.php">Produits</a>
             <a href="search.php"><img src="searchlogo.png" id="searchlogo">Recherche</a>
             <a href="login.php" id="login">Authentification</a>
-            <a href="profile.php" id="profile"><?php if (isset($_SESSION['user'])){ echo $_SESSION['user'];} ?> </a>
         </div>
     </body>
 </html>
