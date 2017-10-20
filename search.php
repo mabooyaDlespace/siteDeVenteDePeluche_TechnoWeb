@@ -38,11 +38,11 @@
         <div id="myheader" ></div>
         <form action="" method="get">
 
-            <input type="text" placeholder="Tapez le produit à rechercher" name="query">
+            <input type="text" placeholder="Tapez le produit à rechercher" name="query" id="searchbar">
             <input type="submit" value="Rechercher" name="rechercher">
 
         </form>
-        <span id="ex">ex: disney, pokemon, animal...</span>
+        <span id="ex">Exemples : Disney, Pokémon, animal...</span>
 
         <table>
             <th>RESULTATS</th>
