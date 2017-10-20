@@ -6,13 +6,13 @@
 
 	$deco = "";
 	if (!empty($sessionid)){
-		$name = infosUser($sessionid);
+		$username = infosUser($sessionid);
 		$deco = '<div id="lien"><a href="logout.php">Se déconnecter</a></div>';
 	}
 	else{
-		$name = 'visiteur';
+		$username = 'visiteur';
 	}
-	$msg = "Bienvenue " .$name;
+	$msg = "Bienvenue " .$username;
 
 ?>
 
@@ -43,15 +43,15 @@
 
 	<form method="post">
             <label class="saisieTexte"   for="username">Nom</label><br>
-            <input type="text" placeholder="<?php echo $name; ?>" name="prenom" id="prenom"><br>
+            <input type="text" placeholder="<?php echo $surname; ?>" name="prenom" id="prenom"><br>
             <label class="saisieTexte" for="password">Prenom</label><br>
             <input  type="text" placeholder="<?php echo $name; ?>" name="nom" id="nom"><br>
             <label class="saisieTexte" for="password">Adresse Email</label><br>
-            <input  type="text" placeholder="<?php echo $name; ?>" name="nom" id="nom"><br>
+            <input  type="text" placeholder="<?php echo $email_address; ?>" name="nom" id="nom"><br>
             <label class="saisieTexte" for="password">Telephone</label><br>
-            <input  type="text" placeholder="<?php echo $name; ?>" name="nom" id="nom"><br>
+            <input  type="text" placeholder="<?php echo $phone_number; ?>" name="nom" id="nom"><br>
             <label class="saisieTexte" for="password">Adresse</label><br>
-            <input  type="text" placeholder="<?php echo $name; ?>" name="nom" id="nom"><br>
+            <input  type="text" placeholder="<?php echo $physical_address; ?>" name="nom" id="nom"><br>
             <input class="saisieTexte" type="submit" value="Submit" name="bouton">
  
     </form>
