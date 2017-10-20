@@ -33,9 +33,7 @@
 <body>
 	<div id="myheader" ></div>
 
-
 	<?php echo $deco ?>
-
 	<div id="msg"><?php echo $msg ?></div>
 
 	<div id="myfooter"></div>
