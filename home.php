@@ -33,17 +33,11 @@
 <body>
 	<div id="myheader" ></div>
 
-<<<<<<< HEAD
 	<div id="entname">Au pays des peluches</div>
 
 
 	<div id="msg"><?php echo $msg ?></div><?php echo $deco ?>
 
-
-=======
-	<?php echo $deco ?>
-	<div id="msg"><?php echo $msg ?></div>
->>>>>>> 5da7f8042710d636254f11cb9124a8f977c373cd
 
 	<div id="myfooter"></div>
 </body>
