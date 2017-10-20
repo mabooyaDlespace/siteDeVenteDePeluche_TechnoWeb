@@ -1,4 +1,5 @@
 /* Barre de navigation */
+
 @font-face {
 font-family: "hangar";
 src: url('hangar-flat.ttf')format('truetype');
@@ -17,8 +18,6 @@ font-style: normal;
     
 
 }
-
-/*Header*/
 .topnav {
     background-color: cornflowerblue;
     overflow: hidden;
@@ -33,12 +32,14 @@ font-style: normal;
     text-decoration: none;
     font-size: 17px; 
     font-family:  Arial;
+    
 }
 
 
 .topnav a:hover {
     background-color: #ddd;
     color: black;
+
 }
 
 .topnav a.active {
@@ -46,26 +47,15 @@ font-style: normal;
     color: white;
 }
 
-#myheader {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    left: 0;
-}
-
 /* Bouton de login */
 
-#login {
-    float: right;
-}
-
-#profile{
+#login{
     float: right;
 }
 
 /* Image loupe */
 
-#searchlogo {
+#searchlogo{
     height: 15px;
     width: 15px;
     padding-right: 5px;
@@ -73,50 +63,46 @@ font-style: normal;
 
 /* Logo du site */
 
-#logo {
+#logo{
     height: 50px;
     width: 50px;
     float: left;
 }
 
 /* Zones de saisie */
-.pseudoEtMDP {
+.pseudoEtMDP{
     font-weight:bold;
     font-family:"3dumbregular";
 }
 
-[type='text'],[type='password'] {
+[type='text'],[type='password']{
     width:150px;
-    min-width: 100px;
+   // min-width: 100px;
     height: 35px;
     border: 2px solid black;
     padding-left: 10px;
-    box-shadow: 4px 4px 6px black;
+    //box-shadow: 4px 4px 6px black;
     font-style: italic;
-    box-shadow: /*0 0 10px 0 rgba(0,0,200,0.2) ,*/ 0px 5px 7px 1px rgba(0,50,200,0.35);
+    box-shadow: /*0 0 10px 0 rgba(0,0,200,0.2) ,*/ 0px 5px 7px 1px rgba(0,50,200,0.35)    
+   
+    
 }
-
-[type='text']:focus,[type='password']:focus {
+[type='text']:focus,[type='password']:focus{
     background-color: #ddd;
     font-family: Arial;
-    font-style: normal;
+     font-style: normal;
 }
-
-form {
+form{
     
     text-align: center;
     padding-top: 50px;
 }
 
-#searchbar {
-    margin-left: 0%;
-    width: 250px;
-}
-
 
 /* Boutons */
 
-[type='submit'] {
+[type='submit']{
+    
     margin-top: 5px;
     background-color: white;
     height: 42px;
@@ -124,19 +110,20 @@ form {
     border: 2px solid black;
     font-family:"hangar";
     letter-spacing: 1px;
+    
     color: cornflowerblue;
     box-shadow: /*0 0 10px 0 rgba(0,0,200,0.2) ,*/ 0px 2px 5px 1px rgba(0,50,200,0.5)     ;
 //box shadow rightleft upDown blurintensity withOfblur
 }
 
-[type='submit']:hover {
+[type='submit']:hover{
     background-color: cornflowerblue;
     color:white;
 }
 
 /* Mise en page des informations du produit */
 
-table {
+table{
     border: 2px solid black;
     border-collapse: collapse;
     text-align: center;
@@ -147,55 +134,85 @@ table {
     margin-top: 100px;
 }
 
-th {
+th{
     border: 4px solid cornflowerblue;
     font-size: 25px;
 }
 
-td {
+td{
     border: 2px solid black;
 }
 
 /* Case relative au prix */
 
-#basket {
-    margin-top: 10px;
+#basket{
     padding-bottom: 20px;
 }
 
-#addbasket {
-    margin-bottom: 10px;
+#addbasket{
     width: auto;
 }
 
 /* Pied de page */
 
-footer {
+footer{
     background-color: cornflowerblue;
     text-align: center;
     color: white;
     margin-top: 50px;
+/*    padding-top: 2px;
+    padding-bottom: 2px;*/
     padding: 10px;
-}
-
-#myfooter {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    left: 0;
 }
 
 /* Fond de page */
 
-body {
+body{
     background-color: powderblue;
-    margin-bottom: 90px;
 }
 
 /* Liste d'exemples de recherches */
 
-#ex {
+#ex{
     display: block;
-	margin-top: 10px;
+	margin-top:10px;
     text-align: center;
+}
+
+#myheader {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	left: 0;
+}
+
+#myfooter {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	left: 0;
+}
+
+body {
+	margin-bottom: 90px;
+}
+
+#searchbar {
+	width: 190px;
+}
+
+#basket {
+	margin-top: 10px;
+}
+
+#addbasket {
+	margin-bottom: 10px;
+}
+
+#lien {
+    margin-top: 50px;
+}
+
+#msg {
+    margin-top: 50px;
 }
