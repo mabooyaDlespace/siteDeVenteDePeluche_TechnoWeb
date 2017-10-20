@@ -16,7 +16,7 @@ here
     </head>
     <body>
         <div class="topnav">
-            <a href="home.php"><img src="logo.png" id="logo" title="Acceuil" href="home.php"></a>
+            <a href="home.php" id="homelogo"><img src="logo.png" id="logo" title="Acceuil"></a>
             <a href="product.php">Produits</a>
             <a href="search.php"><img src="searchlogo.png" id="searchlogo">Recherche</a>
             <a href="login.php" id="login">Authentification</a>

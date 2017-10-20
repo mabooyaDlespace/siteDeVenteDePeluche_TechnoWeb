@@ -64,9 +64,13 @@ font-style: normal;
 /* Logo du site */
 
 #logo {
-    height: 50px;
-    width: 50px;
+    height: 25px;
+    width: 25px;
     float: left;
+}
+
+#homelogo{
+  border: 0px;
 }
 
 
