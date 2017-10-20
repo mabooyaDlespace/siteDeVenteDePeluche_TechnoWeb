@@ -33,21 +33,8 @@
 <body>
 	<div id="myheader" ></div>
 
-	<!-- <form action="" method="post">
-		<input class="pseudoEtMDP" type="submit" value="Se déconnecter" name="deconnexion">
-	</form> -->
 
 	<?php echo $deco ?>
-
-	<form method="post">
-            <label class="saisieTexte"   for="username">Nom</label><br>
-            <input type="text" placeholder="ex:Jean-Kevin" name="prenom" id="prenom"><br>
-            <label class="saisieTexte" for="password">Prenom</label><br>
-            <input  type="text" placeholder="ex :De la Canche" name="nom" id="nom"><br>
- 
-    </form>
-
-
 
 	<div id="msg"><?php echo $msg ?></div>
 

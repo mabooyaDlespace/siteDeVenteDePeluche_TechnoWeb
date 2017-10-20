@@ -31,18 +31,6 @@
         </script>
 </head>
 <body>
-	<!-- <?php
-
-		$id = $_GET['id'];
-		$bdd = new PDO('mysql:host=localhost; dbname=test_site', 'root', '');
-        $reponse = $bdd->query('SELECT * FROM products WHERE productid=\''.$id.'\'');
-        $donnees = $reponse->fetch();
-        $name = $donnees['nom_produit'];
-        $desc = $donnees['description'];
-        $price = $donnees['prix'];
-        $image = $donnees['image'];
-
-	?> -->
 
     <div id="myheader" ></div>
 
