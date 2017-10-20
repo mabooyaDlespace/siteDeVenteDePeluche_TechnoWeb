@@ -2,10 +2,10 @@
 -- version 4.7.4
 -- https://www.phpmyadmin.net/
 --
--- Hôte : 127.0.0.1:3306
--- Généré le :  ven. 20 oct. 2017 à 12:16
--- Version du serveur :  5.7.19
--- Version de PHP :  5.6.31
+-- Hôte : localhost
+-- Généré le :  ven. 20 oct. 2017 à 16:36
+-- Version du serveur :  10.1.26-MariaDB
+-- Version de PHP :  7.1.9
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -28,16 +28,14 @@ SET time_zone = "+00:00";
 -- Structure de la table `products`
 --
 
-DROP TABLE IF EXISTS `products`;
-CREATE TABLE IF NOT EXISTS `products` (
-  `productid` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `products` (
+  `productid` int(11) NOT NULL,
   `categorie` text NOT NULL,
   `nom_produit` text NOT NULL,
   `description` text NOT NULL,
   `image` text NOT NULL,
-  `prix` float NOT NULL,
-  PRIMARY KEY (`productid`)
-) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+  `prix` float NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
 -- Déchargement des données de la table `products`
@@ -55,22 +53,57 @@ INSERT INTO `products` (`productid`, `categorie`, `nom_produit`, `description`, 
 -- Structure de la table `users`
 --
 
-DROP TABLE IF EXISTS `users`;
-CREATE TABLE IF NOT EXISTS `users` (
-  `userid` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `users` (
+  `userid` int(11) NOT NULL,
   `username` text NOT NULL,
   `password` text NOT NULL,
-  PRIMARY KEY (`userid`)
-) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+  `surname` text NOT NULL,
+  `name` text NOT NULL,
+  `email_address` text NOT NULL,
+  `phone_number` text NOT NULL,
+  `physical_address` text NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
 -- Déchargement des données de la table `users`
 --
 
-INSERT INTO `users` (`userid`, `username`, `password`) VALUES
-(1, 'pseudo', 'mdp'),
-(2, 'remi', 'dull'),
-(3, 'test', 'test');
+INSERT INTO `users` (`userid`, `username`, `password`, `surname`, `name`, `email_address`, `phone_number`, `physical_address`) VALUES
+(1, 'pseudo', 'mdp', '', '', '', '', ''),
+(2, 'remi', 'dull', '', '', '', '', ''),
+(3, 'test', 'test', '', '', '', '', '');
+
+--
+-- Index pour les tables déchargées
+--
+
+--
+-- Index pour la table `products`
+--
+ALTER TABLE `products`
+  ADD PRIMARY KEY (`productid`);
+
+--
+-- Index pour la table `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`userid`);
+
+--
+-- AUTO_INCREMENT pour les tables déchargées
+--
+
+--
+-- AUTO_INCREMENT pour la table `products`
+--
+ALTER TABLE `products`
+  MODIFY `productid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT pour la table `users`
+--
+ALTER TABLE `users`
+  MODIFY `userid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
