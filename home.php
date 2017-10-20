@@ -33,7 +33,7 @@
 <body>
 	<div id="myheader" ></div>
 
-	<div id="entname">Au pays des peluches</div>
+	<div id="entname">Fluff'n'Stuff</div>
 
 
 	<div id="msg"><?php echo $msg ?></div><?php echo $deco ?>
