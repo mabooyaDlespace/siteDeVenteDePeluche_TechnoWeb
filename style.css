@@ -49,13 +49,13 @@ font-style: normal;
 
 /* Bouton de login */
 
-#login{
+#login {
     float: right;
 }
 
 /* Image loupe */
 
-#searchlogo{
+#searchlogo {
     height: 15px;
     width: 15px;
     padding-right: 5px;
@@ -63,11 +63,12 @@ font-style: normal;
 
 /* Logo du site */
 
-#logo{
+#logo {
     height: 50px;
     width: 50px;
     float: left;
 }
+
 
 /* Zones de saisie */
 .pseudoEtMDP{

@@ -16,7 +16,7 @@ here
     </head>
     <body>
         <div class="topnav">
-            <img src="logo.png" id="logo" alt="This is the logo of our association" title="Logo of the company" href="home.php" >
+            <a href="home.php"><img src="logo.png" id="logo" title="Acceuil" href="home.php"></a>
             <a href="product.php">Produits</a>
             <a href="search.php"><img src="searchlogo.png" id="searchlogo">Recherche</a>
             <a href="login.php" id="login">Authentification</a>
