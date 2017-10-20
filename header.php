@@ -1,7 +1,3 @@
-<?php 
-    session_start();
- ?>
-
 <!DOCTYPE html>
 <!--
 here
@@ -16,8 +12,8 @@ here
         <div class="topnav">
             <img src="logo.png" id="logo" alt="This is the logo of our association" title="Homepage" >
             
-            <a href="product.html">Produits</a>
-            <a href="search.html"><img src="searchlogo.png" id="searchlogo">Recherche</a>
+            <a href="product.php">Produits</a>
+            <a href="search.php"><img src="searchlogo.png" id="searchlogo">Recherche</a>
             <a href="login.php" id="login">Authentification</a>
             <a href="profile.php" id="profile"><?php if (isset($_SESSION['user'])){ echo $_SESSION['user'];} ?> </a>
         </div>
