@@ -30,7 +30,7 @@
             $query = $_GET['query'];
 
             $bdd = new PDO('mysql:host=localhost; dbname=test_site', 'root', '');
-            $reponse = $bdd->query('SELECT * FROM products WHERE nom_produit=\''.$query.'\'');
+            $reponse = $bdd->query('SELECT * FROM products WHERE nom_produit LIKE \'%'.$query.'%\'');
             #$donnees = $reponse->fetch();
             #$id = $donnees['productid'];
         ?> -->
