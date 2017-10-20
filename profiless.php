@@ -44,6 +44,13 @@
             <input type="text" placeholder="ex:Jean-Kevin" name="prenom" id="prenom"><br>
             <label class="saisieTexte" for="password">Prenom</label><br>
             <input  type="text" placeholder="ex :De la Canche" name="nom" id="nom"><br>
+            <label class="saisieTexte" for="password">Adresse Email</label><br>
+            <input  type="text" placeholder="ex :prenom@nom.fr" name="nom" id="nom"><br>
+            <label class="saisieTexte" for="password">Telephone</label><br>
+            <input  type="text" placeholder="ex :06 xx xx xx xx" name="nom" id="nom"><br>
+            <label class="saisieTexte" for="password">Adresse</label><br>
+            <input  type="text" placeholder="ex :2 rue de paris, Lens, 62000" name="nom" id="nom"><br>
+            <input class="saisieTexte" type="submit" value="Submit" name="bouton">
  
     </form>
 

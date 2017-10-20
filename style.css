@@ -75,6 +75,11 @@ font-style: normal;
     font-family:"3dumbregular";
 }
 
+.saisieTexte{
+    font-weight:italic;
+    font-family:"3dumbregular";
+}
+
 [type='text'],[type='password']{
     width:150px;
    // min-width: 100px;
