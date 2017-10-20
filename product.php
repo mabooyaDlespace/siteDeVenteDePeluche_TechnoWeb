@@ -16,7 +16,9 @@
     if (!empty($_GET['add'])){
         $quantite = $_GET['quantite'];
         $achat = ajouterAuPanier($id, $quantite);
-        header("Location: panier.php");
+        if ($achat){
+            header("Location: panier.php");
+        }
     }
 
 ?>
@@ -44,8 +46,8 @@
 	<th><?php echo $name ?></th>
 	<tr><td><?php echo('<img src="'.$image.'.png">') ?></td></tr> <!--Images au format png -->
 	<tr><td><?php echo $desc ?></td></tr>
-    <tr><td><input type="text" name="quantite"></td></tr>
-	<tr><td><div id="basket"><?php echo $price ?>€</div><input type="submit" value="Ajouter au panier" id="addbasket" name="add"></td></tr>
+    <tr><td><form method="get"><input type="text" name="quantite"></form></td></tr>
+	<tr><td><div id="basket"><?php echo $price ?>€</div><form method="get"><input type="submit" value="Ajouter au panier" id="addbasket" name="add"></form></td></tr>
 </table>
 
 <div id="myfooter"></div>
