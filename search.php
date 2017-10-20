@@ -23,14 +23,14 @@
             #$id = $donnees['productid'];
         ?>
 
-        <div id="myheader" ></div>
-        <form action="search.php" method="get">
+<div id="myheader" ></div>
+        <form action="/search.php" method="get">
 
-            <input type="text" placeholder="Tapez le produit à rechercher" name="query">
+            <input id="searchbar" type="text" placeholder="Tapez le produit à rechercher...">
             <input type="submit" value="Rechercher">
 
         </form>
-        <span id="ex">ex: disney, pokemon, animal...</span>
+        <span id="ex">Exemples : Disney, Pokémon, animal...</span>
 
         <table>
             <th>RESULTS</th>
