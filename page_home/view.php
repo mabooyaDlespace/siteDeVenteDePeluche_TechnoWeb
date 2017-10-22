@@ -9,10 +9,8 @@
 </head>
 <body>
 	<div id="myheader" >
-<?php
-require( "../includes/header.php");
-?>
-        </div>
+		<?php require( "../includes/header.php");?>
+	</div>
 
 	<div id="entname">Fluff'n'Stuff</div>
 
@@ -22,11 +20,10 @@ require( "../includes/header.php");
 		<?php 
 		if ($sessionid==="visiteur") {
 		}
-        elseif (!empty($sessionid)){
-        	echo $deco;
-        }?>
-    </div>
-
+        	elseif (!empty($sessionid)){
+        		echo $deco;
+        	}?>
+	</div>
 
 	<div id="myfooter"> <?php include_once '../includes/footer.html'; ?></div>
 </body>
