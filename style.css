@@ -80,11 +80,6 @@ font-style: normal;
     float: left;
 }
 
-#homelogo{
-  border: 0px;
-
-}
-
 /* Zones de saisie */
 .pseudoEtMDP{
     font-weight:bold;
@@ -245,6 +240,7 @@ body {
     font-size: 38px; 
     text-align: center;
 }
+
 #produit {
     position: absolute;
     background-color: white;
@@ -253,11 +249,13 @@ body {
     width: 200px;
     height: 300px; 
 }
-#box1{
+
+#box1 {
     position: absolute;
     margin: 75px 0px 0px 500px;
 }
-#box2{
+
+#box2 {
     position:  absolute;
     margin: 150px 0px 0px 900px;
     box-shadow: 0px 5px 7px 1px rgba(0,50,200,0.35);
@@ -266,28 +264,34 @@ body {
     width: 250px; 
     word-wrap: break-word;
 }
-#box3{
+
+#box3 {
     position: absolute;
     margin: 150px 0px 0px 400px;
     width: 450px; 
     word-wrap: break-word; 
 
 }
-#panier1{
+
+#panier1  {
     width: 10px;
     height: 10px;
 }
+
 #produit:hover {
     zoom:150%;
     position: fixed;
 }
-#red{
+
+#red {
     color: red;
 }
-#orange{
+
+#orange {
     background-color: #E99708; 
     margin-left: 55px;
 }
+
 .rating a {
    float: right;
    color: #aaa;
@@ -296,10 +300,15 @@ body {
    transition: color .4s;
    margin-right: 10px;
 }
+
 .rating a:hover,
 .rating a:focus,
 .rating a:hover ~ a,
 .rating a:focus ~ a {
    color: orange;
    cursor: pointer;
+}
+
+#session {
+    float: right;
 }
