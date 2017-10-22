@@ -14,7 +14,7 @@ if(session_id() == '' || !isset($_SESSION)) {
 
 function returnUserConnection($sessionid){
 	$out['deco'] = "";
-        $out['name'] = '☐ visiteur';
+        $out['name'] = ' ☐ visiteur';
         if ($sessionid==="visiteur") {
                 }
         elseif (!empty($sessionid)){
