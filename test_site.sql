@@ -21,6 +21,10 @@ SET time_zone = "+00:00";
 --
 -- Base de données :  `test_site`
 --
+create database if not exists test_site character set utf8 collate utf8_unicode_ci;
+use test_site;
+
+grant all privileges on microcms.* to 'microcms_user'@'localhost' identified by 'secret';
 
 -- --------------------------------------------------------
 
