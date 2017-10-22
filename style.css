@@ -235,6 +235,13 @@ body {
     margin-top: 30px;
 }
 
+#msglogin {
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 10px;
+    width: 300px;
+}
+
 #entname {
     margin-top: 60px;
     font-size: 38px; 
