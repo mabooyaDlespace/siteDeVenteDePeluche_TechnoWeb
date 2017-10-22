@@ -1,7 +1,6 @@
-
-
 <!DOCTYPE html>
 <html>
+<!-- Hugo Stenger -->
 <head>
 	<title>HomePage</title>
 	<meta charset="utf-8">
@@ -18,7 +17,15 @@ require( "../includes/header.php");
 	<div id="entname">Fluff'n'Stuff</div>
 
 
-	<div id="msg"><?php echo $msg ?></div><?php echo $deco ?>
+	<div id="msg"><?php echo $msg ?></div>
+	<div> 
+		<?php 
+		if ($sessionid==="visiteur") {
+		}
+        elseif (!empty($sessionid)){
+        	echo $deco;
+        }?>
+    </div>
 
 
 	<div id="myfooter"> <?php include_once '../includes/footer.html'; ?></div>
