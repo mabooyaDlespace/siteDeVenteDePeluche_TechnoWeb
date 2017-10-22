@@ -25,8 +25,8 @@ require( "../includes/header.php");
             <input class="pseudoEtMDP" type="submit" value="S'inscrire" name="inscription">
         </form>
 
-        <div id="msg"><?php echo $msgErreurConnexion ?></div>
-        <div id="msg"><?php echo $msgErreurInscription ?></div>
+        <div id="msglogin"><?php echo $msgErreurConnexion ?></div>
+        <div id="msglogin"><?php echo $msgErreurInscription ?></div>
 
        <div id="myfooter"> <?php include_once '../includes/footer.html'; ?></div>
     </body>
