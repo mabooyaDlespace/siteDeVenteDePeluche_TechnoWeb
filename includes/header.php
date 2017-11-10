@@ -1,5 +1,5 @@
 <?php
-$absoluteDirectoryName="http://localhost/sitedeventedepeluche_technoweb-firstnewbranche/";
+$absoluteDirectoryName="/phpwebsite/";
 //$suitableWrapper='"'.$absoluteDirectoryName.'includes/checkSession"';
 require_once dirname(__FILE__).'/../database.php';
 require_once dirname(__FILE__).'/../session.php';
