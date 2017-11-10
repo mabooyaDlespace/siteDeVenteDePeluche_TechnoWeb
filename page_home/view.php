@@ -13,6 +13,24 @@
 	</div>
 
 	<div id="entname">Fluff'n'Stuff</div>
+	<br>
+	<br>
+	<br>
+	<div class="Scroller">
+		<marquee onmouseover="this.stop()" onmouseout="this.start()" scrollamount="1" scrolldelay="0" direction="up" behavior="scroll" height="40">
+			<div id="titleHomeScroll">
+				Mis à jour du site en cours
+			</div>
+			<br>
+			Le site est actuellement manipulé par un groupe de 9 individus dans un but honorable de rendre tout celà joli et fonctionnel.
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+		</marquee>
+	</div>
 
 
 	<div id="msg"><?php echo $msg ?></div>
@@ -24,6 +42,8 @@
         		echo $deco;
         	}?>
 	</div>
+
+
 
 	<div id="myfooter"> <?php include_once '../includes/footer.html'; ?></div>
 </body>
