@@ -33,7 +33,7 @@
 	{
 		try{
 			$db = connectDB();
-			$sql = 'INSERT INTO paniers(userid, productid, quantite) VALUES (\''.$userid.'\', \''.$item.'\', \''.$quantite.'\') ';
+			$sql = 'INSERT INTO paniers(userid, productid, quantite) VALUES (\''.$_SESSION['userid'].'\', \''.$item.'\', \''.$quantite.'\')';
 			$query = $db->exec($sql);
 			$db = null;
 			return true;
