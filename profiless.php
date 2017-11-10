@@ -50,7 +50,7 @@ require( "includes/header.php");
             <input  type="text" placeholder="<?php echo $email_address; ?>" name="nom" id="nom"><br>
             <label class="saisieTexte" for="password">Telephone</label><br>
             <input  type="text" placeholder="<?php echo $phone_number; ?>" name="nom" id="nom"><br>
-            <label class="saisieTexte" for="password">Adresse</label><br>
+            <label class="saisieTexte" for="password">Adressegdfgdsjifghjgjdsf</label><br>
             <input  type="text" placeholder="<?php echo $physical_address; ?>" name="nom" id="nom"><br>
             <input class="saisieTexte" type="submit" value="Submit" name="bouton">
  
