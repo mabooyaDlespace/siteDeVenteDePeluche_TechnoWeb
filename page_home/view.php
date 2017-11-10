@@ -20,19 +20,9 @@
 				Mise à jour du site en cours
 			</div>
 			<br>
-<<<<<<< HEAD
-			Le site est actuellement manipulé par un groupe de 9 individus dans un but honorable de rendre tout cela joli et fonctionnel.
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-=======
 			<div id="textHomeScroll">
 				Le site est actuellement manipulé par un groupe de 9 individus dans un but honorable de rendre tout celà joli et fonctionnel.
 			</div>
->>>>>>> 353aa8598a4ab733f91e0729207bf8118eca99d4
 		</marquee>
 	</div>
 
