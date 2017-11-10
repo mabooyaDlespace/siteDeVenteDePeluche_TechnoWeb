@@ -23,30 +23,35 @@ if (!empty($_GET['add']) || !empty($_GET['quantite'])) {
 
 <!DOCTYPE html>
 <html>
-    <head>
-        <!-- Rémi Willems, Romain Sens et Dylane Sidelhadj -->
-        <title>Page Produit</title>
-        <meta charset="utf-8">
-        <link rel="stylesheet" type="text/css" href="style.css">
+<head>
+	<!-- Rémi Willems, Romain Sens et Dylane Sidelhadj -->
+	<title><?php echo $nameOfproduct ?></title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
         
-    </head>
-    <body>
+</head>
+<body>
 
-
-        <div id="myheader" >
+    <div id="myheader" >
 <?php
 require( "includes/header.php");
 ?>
         </div>
-        <table>
-            <th><?php echo $nameOfproduct ?></th>
-            <tr><td><?php echo('<img src="images/' . $image . '.png">') ?></td></tr> <!--Images au format png -->
-            <tr><td><?php echo $desc ?></td></tr>
-            <tr><td><form method="get">Quantité ? <input type="number" value="1" min="1" max="10000" name="quantite"></form></td></tr>
-            <tr><td><div id="basket"><?php echo $price ?>€</div><form method="get"><input type="submit" value="Ajouter au panier" id="addbasket" name="add"></form></td></tr>
-        </table>
+    
+	<div><?php echo('<img src="images/' . $image . '.png" id="produit">') ?></div>
+	<H1 id="box1"><?php echo $nameOfproduct ?></H1>
+    <div id="box3">Description du produit : <br><br>
+		<?php echo $desc ?>
+    </div>
+    <div id="box2">
+		<form method="get">Quantité ? <input type="number" value="1" min="1" max="10000" name="quantite">
+        <br><br><br>
+        <div  id="price"><?php echo $price ?>€</div><br>
+		<div id="basket"></div><input type="submit" value="Ajouter au panier" id="addbasket" name="add"><div><img id="panier1" src="images/panier-ajout.png"></div></form>
+		
+    </div>
 
- <div id="myfooter"> <?php include_once 'includes/footer.html'; ?></div>
-
-    </body>
+<!--<div id="myfooter"></div>-->
+<div id="myfooter"> <?php include_once 'includes/footer.html'; ?></div>
+</body>
 </html>
