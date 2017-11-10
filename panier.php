@@ -1,5 +1,4 @@
 <?php
-<?php
 
     include('database.php');
     include('store.php');
