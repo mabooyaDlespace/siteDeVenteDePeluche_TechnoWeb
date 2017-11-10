@@ -12,7 +12,7 @@ if (!empty($_GET['id'])) {
     $image = $infos['image'];
 }
 
-if (!empty($_GET['add'])) {
+if (!empty($_GET['add']) || !empty($_GET['quantite'])) {
     $quantite = $_GET['quantite'];
     $achat = ajouterAuPanier($id, $quantite);
     if ($achat) {
@@ -42,7 +42,7 @@ require( "includes/header.php");
             <th><?php echo $nameOfproduct ?></th>
             <tr><td><?php echo('<img src="images/' . $image . '.png">') ?></td></tr> <!--Images au format png -->
             <tr><td><?php echo $desc ?></td></tr>
-            <tr><td><form method="get">Quantité?<input type="text" name="quantite"></form></td></tr>
+            <tr><td><form method="get">Quantité ? <input type="number" value="1" min="1" max="10000" name="quantite"></form></td></tr>
             <tr><td><div id="basket"><?php echo $price ?>€</div><form method="get"><input type="submit" value="Ajouter au panier" id="addbasket" name="add"></form></td></tr>
         </table>
 
