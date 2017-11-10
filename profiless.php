@@ -1,7 +1,7 @@
 <?php
 
 	include('database.php');
-        require("include/checkSession.php");
+        require("includes/checkSession.php");
 	include('session.php');
 	include('user.php');
 
