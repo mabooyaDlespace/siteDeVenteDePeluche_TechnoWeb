@@ -323,3 +323,11 @@ body {
 #session {
     float: right;
 }
+
+#titleHomeScroll {
+    font-weight : bold;
+}
+
+.Scroller {
+    text-align: center;
+}

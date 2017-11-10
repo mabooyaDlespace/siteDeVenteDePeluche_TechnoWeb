@@ -7,7 +7,7 @@
 
 	if(empty($sessionid) && empty($_SESSION['userid']))
 	{
-		header("Location: page_login/index.php");
+		header("Location: page_home/index.php");
 	}
 
 ?>
