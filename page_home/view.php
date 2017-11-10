@@ -22,11 +22,8 @@
 				Mis à jour du site en cours
 			</div>
 			<br>
-			Le site est actuellement manipulé par un groupe de 9 individus dans un but honorable de rendre tout celà joli et fonctionnel.
-			<br>
-			<br>
-			<br>
-			<br>
+			<div id="textHomeScroll">
+				Le site est actuellement manipulé par un groupe de 9 individus dans un but honorable de rendre tout celà joli et fonctionnel.
 			<br>
 			<br>
 		</marquee>
