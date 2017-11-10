@@ -1,16 +1,33 @@
 <?php
-include('database.php');
-include('store.php');
 
-if (!empty($_GET['id'])) {
-    $id = $_GET['id'];
-    $infos = rechercherId($id);
+    include('database.php');
+    include('store.php');
+    include('session.php');
+    include('user.php');
 
-    $nameOfproduct = $infos['nom_produit'];
-    $desc = $infos['description'];
-    $price = $infos['prix'];
-    $image = $infos['image'];
-}
+    $msgErreur = "";
+
+    if (!empty($_GET['id'])){
+        $id = $_GET['id'];
+        $infos = rechercherId($id);
+
+        $name = $infos['nom_produit'];
+        $desc = $infos['description'];
+        $price = $infos['prix'];
+        $image = $infos['image'];
+    }
+
+    /* if (!empty($_GET['add']) || !empty($_GET['quantite'])){
+        $quantite = $_GET['quantite'];
+        $achat = ajouterAuPanier($id, $quantite);
+        if ($achat){
+            $msgid = $id;
+            $msgquant = $quantite;
+        }
+        else{
+            $msgErreur = "Erreur";
+        }
+    } */
 ?>
 
 <!DOCTYPE html>
