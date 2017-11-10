@@ -15,17 +15,15 @@
 	<div id="entname">Fluff'n'Stuff</div>
 	<br>
 	<div>
-		<marquee class="Scroller" onmouseover="this.stop()" onmouseout="this.start()" scrollamount="1" scrolldelay="0" direction="up" behavior="scroll" height="60">
+		<marquee onmouseover="this.stop()" onmouseout="this.start()" scrollamount="1.5" scrolldelay="0" direction="up" behavior="scroll" height="60">
 			<div id="titleHomeScroll">
 				Mise à jour du site en cours
 			</div>
-			<br>
 			<div id="textHomeScroll">
 				Le site est actuellement manipulé par un groupe de 9 individus dans un but honorable de rendre tout celà joli et fonctionnel.
 			</div>
 		</marquee>
 	</div>
-
 
 	<div id="msg"><?php echo $msg ?></div>
 	<div> 
@@ -35,6 +33,18 @@
         	elseif (!empty($sessionid)){
         		echo $deco;
         	}?>
+	</div>
+
+	<div>
+		<marquee onmouseover="this.stop()" onmouseout="this.start()" scrollamount="3" scrolldelay="0" direction="up" behavior="scroll" height="400" width="100">
+			<div id="titleNoveltyScroll">
+				Nouveautés :
+			</div>
+			<div>
+				<img id="evoliScroll" src="../images/evoli.png">
+				<a id="lienProduit" href="../product.php?id=1">Evoli</a>
+			</div>
+		</marquee>
 	</div>
 
 
