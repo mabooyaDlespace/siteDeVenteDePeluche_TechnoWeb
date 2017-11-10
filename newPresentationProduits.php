@@ -44,10 +44,10 @@ require( "includes/header.php");
 		<?php echo $desc ?>
     </div>
     <div id="box2">
-		<form method="get">Quantité ? <input type="number" value="1" min="1" max="10000" name="quantite"></form>
+		<form method="get">Quantité ? <input type="number" value="1" min="1" max="10000" name="quantite">
         <br>
         <div  id="price"><?php echo $price ?>€</div><br>
-		<div id="basket"></div><form method="get"><input type="submit" value="Ajouter au panier" id="addbasket" name="add"><div><img id="panier1" src="images/panier-ajout.png"></div></form>
+		<div id="basket"></div><input type="submit" value="Ajouter au panier" id="addbasket" name="add"><div><img id="panier1" src="images/panier-ajout.png"></div></form>
 		
     </div>
 

@@ -19,10 +19,10 @@
 	<div class="Scroller">
 		<marquee onmouseover="this.stop()" onmouseout="this.start()" scrollamount="1" scrolldelay="0" direction="up" behavior="scroll" height="40">
 			<div id="titleHomeScroll">
-				Mis à jour du site en cours
+				Mise à jour du site en cours
 			</div>
 			<br>
-			Le site est actuellement manipulé par un groupe de 9 individus dans un but honorable de rendre tout celà joli et fonctionnel.
+			Le site est actuellement manipulé par un groupe de 9 individus dans un but honorable de rendre tout cela joli et fonctionnel.
 			<br>
 			<br>
 			<br>
