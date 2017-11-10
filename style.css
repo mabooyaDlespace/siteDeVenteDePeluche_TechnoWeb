@@ -1,18 +1,27 @@
+/* Header */
+
+#myheader {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    left: 0;
+}
+
 /* Barre de navigation */
 
 @font-face {
 font-family: "hangar";
-src: url('hangar-flat.ttf')format('truetype');
-src: url('hangar-flat-webfont.woff') format ('woff');
-src: url('hangar-flat-webfont.woff2') format ('woff2');
+src: url('fonts/hangar-flat.ttf')format('truetype');
+src: url('fonts/hangar-flat-webfont.woff') format ('woff');
+src: url('fonts/hangar-flat-webfont.woff2') format ('woff2');
 font-weight: normal;
 font-style: normal;
 }
 @font-face {
     font-family: "3dumbregular";
-    src: url('3dumb-webfont.woff2') format('woff2'),
-         url('3dumb-webfont.woff') format('woff'), 
-         url('3dumb-webfont.ttf') format('truetype');
+    src: url('fonts/3dumb-webfont.woff2') format('woff2'),
+         url('fonts/3dumb-webfont.woff') format('woff'), 
+         url('fonts/3dumb-webfont.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
     
@@ -28,7 +37,18 @@ font-style: normal;
     display: block;
     color: #f2f2f2;
     text-align: center;
-    padding: 14px 16px;
+    padding: 5px 16px;
+    text-decoration: none;
+    font-size: 17px; 
+    font-family:  Arial;
+    
+}
+.topnavTexts a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 10px 16px;
     text-decoration: none;
     font-size: 17px; 
     font-family:  Arial;
@@ -53,6 +73,11 @@ font-style: normal;
     float: right;
 }
 
+/*Bouton profil*/
+#session {
+    float: right;
+}
+
 /* Image loupe */
 
 #searchlogo {
@@ -64,15 +89,10 @@ font-style: normal;
 /* Logo du site */
 
 #logo {
-    height: 25px;
-    width: 25px;
+    height: 30px;
+    width: 30px;
     float: left;
 }
-
-#homelogo{
-  border: 0px;
-}
-
 
 /* Zones de saisie */
 .pseudoEtMDP{
@@ -93,15 +113,15 @@ font-style: normal;
     padding-left: 10px;
     //box-shadow: 4px 4px 6px black;
     font-style: italic;
-    box-shadow: /*0 0 10px 0 rgba(0,0,200,0.2) ,*/ 0px 5px 7px 1px rgba(0,50,200,0.35)    
-   
-    
+    box-shadow: /*0 0 10px 0 rgba(0,0,200,0.2) ,*/ 0px 5px 7px 1px rgba(0,50,200,0.35)        
 }
+
 [type='text']:focus,[type='password']:focus{
     background-color: #ddd;
     font-family: Arial;
      font-style: normal;
 }
+
 form{
     
     text-align: center;
@@ -122,8 +142,7 @@ form{
     letter-spacing: 1px;
     
     color: cornflowerblue;
-    box-shadow: /*0 0 10px 0 rgba(0,0,200,0.2) ,*/ 0px 2px 5px 1px rgba(0,50,200,0.5)     ;
-//box shadow rightleft upDown blurintensity withOfblur
+    box-shadow: 0px 2px 5px 1px rgba(0,50,200,0.5);
 }
 
 [type='submit']:hover{
@@ -157,10 +176,12 @@ td{
 
 #basket{
     padding-bottom: 20px;
+    margin-top: 10px;
 }
 
 #addbasket{
     width: auto;
+    margin-bottom: 10px;
 }
 
 /* Pied de page */
@@ -170,70 +191,56 @@ footer{
     text-align: center;
     color: white;
     margin-top: 50px;
-/*    padding-top: 2px;
-    padding-bottom: 2px;*/
     padding: 10px;
+}
+
+#myfooter {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    left: 0;
 }
 
 /* Fond de page */
 
 body{
     background-color: powderblue;
+    margin-bottom: 90px;
 }
 
 /* Liste d'exemples de recherches */
 
-#ex{
+#ex {
     display: block;
 	margin-top:10px;
     text-align: center;
 }
 
-#myheader {
-	position: fixed;
-	top: 0;
-	width: 100%;
-	left: 0;
-}
-
-#myfooter {
-	position: fixed;
-	bottom: 0;
-	width: 100%;
-	left: 0;
-}
-
-body {
-	margin-bottom: 90px;
-}
-
+/*Page recherche*/
 #searchbar {
 	width: 190px;
 }
 
-#basket {
-	margin-top: 10px;
-}
-
-#addbasket {
-	margin-bottom: 10px;
-}
 
 #lien {
     text-align: right;
     margin-left: 10px;
 }
 
+
 #msg {
     text-align: right;
     margin-top: 30px;
 }
 
-#entname {
-    margin-top: 60px;
-    font-size: 38px; 
-    text-align: center;
+#msglogin {
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 10px;
+    width: 300px;
 }
+
+/* Page produit */
 #produit {
     position: absolute;
     background-color: white;
@@ -242,41 +249,53 @@ body {
     width: 200px;
     height: 300px; 
 }
-#box1{
+
+#produit:hover {
+    zoom:150%;
+    position: fixed;
+}
+
+#box1 {
     position: absolute;
     margin: 75px 0px 0px 500px;
 }
-#box2{
+
+#box2 {
     position:  absolute;
-    margin: 150px 0px 0px 900px;
+    margin: 100px 0px 0px 900px;
     box-shadow: 0px 5px 7px 1px rgba(0,50,200,0.35);
     border: 1px solid;
     padding: 20px 20px 20px 20px;
     width: 250px; 
     word-wrap: break-word;
 }
-#box3{
+
+#box3 {
     position: absolute;
     margin: 150px 0px 0px 400px;
     width: 450px; 
     word-wrap: break-word; 
 
 }
-#panier1{
-    width: 10px;
-    height: 10px;
+
+#panier1  {
+    width: 25px;
+    height: 25px;
 }
-#produit:hover {
-    zoom:150%;
-    position: fixed;
+
+#price {
+    text-align: center;
 }
-#red{
+
+#red {
     color: red;
 }
-#orange{
+
+#orange {
     background-color: #E99708; 
     margin-left: 55px;
 }
+
 .rating a {
    float: right;
    color: #aaa;
@@ -285,10 +304,23 @@ body {
    transition: color .4s;
    margin-right: 10px;
 }
+
 .rating a:hover,
 .rating a:focus,
 .rating a:hover ~ a,
 .rating a:focus ~ a {
    color: orange;
    cursor: pointer;
+}
+
+/* Page Home */
+#titleHomeScroll {
+    font-weight : bold;
+    text-align: center;
+}
+
+#entname {
+    margin-top: 60px;
+    font-size: 38px; 
+    text-align: center;
 }

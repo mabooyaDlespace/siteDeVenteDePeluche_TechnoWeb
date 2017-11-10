@@ -27,27 +27,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<!-- Rémi Willems, Loïc Schafran -->
+	<!-- Rï¿½mi Willems, Loï¿½c Schafran -->
 	<title>Panier</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="style.css">
-        <script src="//code.jquery.com/jquery-1.10.2.js"></script>
-        <script>
-            $(function () {
-                $("#myheader").load("header.html");
-                $("#myfooter").load("footer.html");
-            });
-        </script>
+        
 </head>
 <body>
 
-<div id="myheader" ></div>
+<div id="myheader" > <?php require( "includes/header.php");?> </div>
 
 <div><?php echo $msgErreur; ?></div>
 <div><?php echo $msgid; ?></div>
 <div><?php echo $msgquant; ?></div>
 
-<div id="myfooter"></div>
+<div id="myfooter"> <?php include_once 'includes/footer.html'; ?></div>
 
 </body>
 </html>

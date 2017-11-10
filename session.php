@@ -4,7 +4,6 @@
 		$sessionid = $_SESSION['userid'];
 	}
 	else{
-		header('login2.php');
+		$sessionid = "visiteur";//session id est utilisé dans
 	}
 
-?>

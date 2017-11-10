@@ -1,6 +1,7 @@
 <?php
 
 	include('database.php');
+        require("includes/checkSession.php");
 	include('session.php');
 	include('user.php');
 
@@ -22,16 +23,15 @@
 	<title>Bienvenue</title>
 	<meta charset="utf-8">
         <link rel="stylesheet" type="text/css" href="style.css">
-        <script src="//code.jquery.com/jquery-1.10.2.js"></script>
-        <script>
-            $(function () {
-                $("#myheader").load("header.php");
-                $("#myfooter").load("footer.html");
-            });
-        </script>
+        
+        
 </head>
 <body>
-	<div id="myheader" ></div>
+	<div id="myheader" >
+<?php
+require( "includes/header.php");
+?>
+        </div>
 
 	<!-- <form action="" method="post">
 		<input class="pseudoEtMDP" type="submit" value="Se déconnecter" name="deconnexion">
@@ -50,7 +50,7 @@
             <input  type="text" placeholder="<?php echo $email_address; ?>" name="nom" id="nom"><br>
             <label class="saisieTexte" for="password">Telephone</label><br>
             <input  type="text" placeholder="<?php echo $phone_number; ?>" name="nom" id="nom"><br>
-            <label class="saisieTexte" for="password">Adresse</label><br>
+            <label class="saisieTexte" for="password">Adressegdfgdsjifghjgjdsf</label><br>
             <input  type="text" placeholder="<?php echo $physical_address; ?>" name="nom" id="nom"><br>
             <input class="saisieTexte" type="submit" value="Submit" name="bouton">
  
@@ -60,6 +60,6 @@
 
 	<div id="msg"><?php echo $msg ?></div>
 
-	<div id="myfooter"></div>
+	 <div id="myfooter"> <?php include_once 'includes/footer.html'; ?></div>
 </body>
 </html>
