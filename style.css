@@ -247,7 +247,7 @@ body{
     margin: 100px 0px 0px 50px;
     border: 1px solid;
     width: 200px;
-    height: 300px; 
+    height: auto; 
 }
 
 #produit:hover {
@@ -314,13 +314,25 @@ body{
 }
 
 /* Page Home */
-#titleHomeScroll {
+#titleHomeScroll, #titleNoveltyScroll {
     font-weight : bold;
     text-align: center;
+    text-decoration: underline;
+    padding-bottom: 20px;
 }
 
 #entname {
     margin-top: 60px;
     font-size: 38px; 
     text-align: center;
+}
+
+#evoliScroll {
+    max-width: 100%;
+    height: auto;
+}
+
+#lienProduit {
+    text-align : center;
+    padding-bottom: 20px;
 }
