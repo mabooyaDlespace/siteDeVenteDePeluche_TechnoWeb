@@ -43,7 +43,7 @@
 		}
 	}
 
-	function afficherToutesLesPeluches()
+	function rechercherToutesLesPeluches()
 	{
 		try{
 			$db = connectDB();

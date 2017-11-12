@@ -25,15 +25,8 @@
 		</marquee>
 	</div>
 
-	<div id="msg"><?php echo $msg ?></div>
-	<div> 
-		<?php 
-		if ($sessionid==="visiteur") {
-		}
-        	elseif (!empty($sessionid)){
-        		echo $deco;
-        	}?>
-	</div>
+	<div id="msg"><?php echo $msg . $deco ?></div>
+	
 
 	<div>
 		<marquee onmouseover="this.stop()" onmouseout="this.start()" scrollamount="3" scrolldelay="0" direction="up" behavior="scroll" height="400" width="100">

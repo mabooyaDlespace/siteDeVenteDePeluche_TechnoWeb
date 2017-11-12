@@ -25,16 +25,8 @@ require( "../includes/header.php");
 
         <table>
             <th>RESULTATS</th>
-<?php
-#echo('<a href="product.php?id='.$id.'">Resultat</a>');
-if (!empty($reponse)) {
-    foreach ($reponse as $row) {
-        # code...
-        echo('<tr><td><a href="../product.php?id=' . $row['productid'] . '">' . $row['nom_produit'] . '</a></td></tr>');
-    }
-}
-afficherPeluches($reponse);
-?>
+<?php echo $contenu_de_la_reponse_de_la_recherche;?>
+
         </table>
 
         <div id="myfooter"> <?php include_once '../includes/footer.html'; ?></div>

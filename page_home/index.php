@@ -1,7 +1,5 @@
 <?php
 
-
-
 require 'model.php';
 
 $temp=returnWelcomMessageAndLinkForDeconnectionIfUser($sessionid);
