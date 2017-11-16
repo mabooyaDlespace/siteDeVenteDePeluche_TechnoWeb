@@ -1,7 +1,7 @@
 <?php
 
     include('database.php');
-    include('store.php');
+    require ('modelStore.php');
     include('session.php');
     include('user.php');
 	

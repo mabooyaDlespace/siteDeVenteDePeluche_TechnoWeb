@@ -7,7 +7,7 @@
  */
 
 require('../database.php');
-require('../store.php');
+require('../modelStore.php');
 
 //$testing=0;
 //if (!empty($_GET['search'])) {
