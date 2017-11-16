@@ -45,7 +45,7 @@ function afficherPeluches($reponse) {
         ob_start(); 
         foreach ($reponse as $row) {
             # code...
-            echo('<tr><td><a href="../product.php?id=' . $row['productid'] . '">' . $row['nom_produit'] . '</a></td></tr>');
+            echo('<tr><td><a href="../page_product/product.php?id=' . $row['productid'] . '">' . $row['nom_produit'] . '</a></td></tr>');
         }
         return ob_get_clean();
     }
