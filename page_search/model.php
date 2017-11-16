@@ -23,7 +23,7 @@ require('../store.php');
  */
 function getResponse() {
     $reponse="";//il faut initier a null 
-    if (!empty($_GET['search']&& !empty($_GET['query']))) {
+    if (isset($_GET['search'])&&!empty($_GET['search']&& !empty($_GET['query']))) {
         $recherche = $_GET['query'];
         $reponse = rechercher($recherche);// renvoi un non empty meme si pas de resultat
     }
