@@ -18,7 +18,7 @@ require('../modelStore.php');
  * get le submit "search" du boutton Rechercher de la bage search
  * marche si on tape la totalité
  * ou
- * Renvoie la totalité des peluche sinon 
+ * Renvoie la totalité des peluches sinon 
  * @return type
  */
 function getResponse() {
@@ -35,17 +35,20 @@ function getResponse() {
     return $reponse;
 }
 /**
- * permet d'afficher une reponse de ma base de données
+ * Permet de générer des liens pour acceder au produit
+ * product id est passé en global pour pouvoir être utilisé par product.php
+ *  ie voir page_product/product.php
  * 
- * @param type $reponse
- * @return type return du code html qu'on flush dans une variable
+ * 
+ * @param type $reponse de BDD
+ * @return type return du code html qu'on flush dans une variable avc le clean()
  */
 function afficherPeluches($reponse) {
     if (!empty($reponse)) {
         ob_start(); 
         foreach ($reponse as $row) {
             # code...
-            echo('<tr><td><a href="../page_product/product.php?id=' . $row['productid'] . '">' . $row['nom_produit'] . '</a></td></tr>');
+            echo('<tr><td><a href="../page_product/index.php?productid=' . $row['productid'] . '">' . $row['nom_produit'] . '</a></td></tr>');
         }
         return ob_get_clean();
     }
