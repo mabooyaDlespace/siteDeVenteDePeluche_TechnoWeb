@@ -33,7 +33,7 @@ function checIfUserExistAndConnexionWhenSubmitSinscrire(){
         if (!empty($username && !empty($password))){
             $inscription = inscription($username, $password);
             if ($inscription){
-                header("Location: page_home/index.php");
+                header("Location: ../page_home/index.php");
             }
             else{
                return $msgErreurInscription = "Ce nom d'utilisateur est déjà utilisé.";

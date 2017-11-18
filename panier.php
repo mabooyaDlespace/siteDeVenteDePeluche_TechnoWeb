@@ -1,7 +1,7 @@
 <?php
 
     include('database.php');
-    include('store.php');
+    include('modelStore.php');
     include('session.php');
     include('user.php');
 
@@ -36,10 +36,10 @@
 <body>
 
 <div id="myheader" > <?php require( "includes/header.php");?> </div>
-
-<div><?php echo $msgErreur; ?></div>
-<div><?php echo $msgid; ?></div>
-<div><?php echo $msgquant; ?></div>
+<br><br><br><br>
+<div><?php echo  $msgErreur; ?></div>
+<div><?php echo "Product_id :" . $msgid; ?></div>
+<div><?php echo "Quantite :".$msgquant; ?></div>
 
 <div id="myfooter"> <?php include_once 'includes/footer.html'; ?></div>
 
