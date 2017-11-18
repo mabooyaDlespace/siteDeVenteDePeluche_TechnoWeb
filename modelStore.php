@@ -4,6 +4,7 @@
 	{
 		try{
 			$db = connectDB();
+                        $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 			$sql = 'SELECT * FROM products WHERE nom_produit=\''.$name.'\'';
 			$query = $db->query($sql);
 			$db = null;
@@ -18,6 +19,7 @@
 	{
 		try{
 			$db = connectDB();
+                        $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 			$sql = 'SELECT * FROM products WHERE productid=\''.$id.'\'';
 			$query = $db->query($sql);
 			$data = $query->fetch();

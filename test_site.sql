@@ -21,6 +21,8 @@ SET time_zone = "+00:00";
 --
 -- Base de données :  `test_site`
 --
+DROP DATABASE IF EXISTS test_site;
+ 
 create database if not exists test_site character set utf8 collate utf8_unicode_ci;
 use test_site;
 
@@ -61,11 +63,11 @@ CREATE TABLE `users` (
   `userid` int(11) NOT NULL,
   `username` text NOT NULL,
   `password` text NOT NULL,
-  `surname` text NOT NULL,
-  `name` text NOT NULL,
-  `email_address` text NOT NULL,
-  `phone_number` text NOT NULL,
-  `physical_address` text NOT NULL
+  `surname` text ,
+  `name` text ,
+  `email_address` text ,
+  `phone_number` text ,
+  `physical_address` text 
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
@@ -73,9 +75,9 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`userid`, `username`, `password`, `surname`, `name`, `email_address`, `phone_number`, `physical_address`) VALUES
-(1, 'pseudo', 'mdp', '', '', '', '', ''),
-(2, 'remi', 'dull', '', '', '', '', ''),
-(3, 'test', 'test', '', '', '', '', '');
+(1, 'pseudo', 'mdp', 'surname',  'name', 'email_address', 'phone_number', 'physical_address'),
+(2, 'remi', 'dull', 'surname',  'name', 'email_address', 'phone_number', 'physical_address'),
+(3, 'test', 'test', 'surname',  'name', 'email_address', 'phone_number', 'physical_address');
 
 --
 -- Index pour les tables déchargées

@@ -16,10 +16,11 @@
 
 		try{
 			$bdd = new PDO('mysql:host='.$dbserver.'; dbname='.$dbname.'', $dbuser, $dbpassword);
-			return $bdd;
+			$bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+                        return $bdd;
 		}
 		catch (PDOException $e){
-			echo ('Connexion échouée: ' .$e->getMessage());
+			echo ('<br><br><br>   Connexion échouée: ' .$e->getMessage());
 		}
 	}
 
