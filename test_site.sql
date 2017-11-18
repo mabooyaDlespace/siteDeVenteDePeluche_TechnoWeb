@@ -35,13 +35,14 @@ grant all privileges on microcms.* to 'microcms_user'@'localhost' identified by 
 --
 
 CREATE TABLE `products` (
-  `productid` int(11) NOT NULL,
-  `categorie` text NOT NULL,
-  `nom_produit` text NOT NULL,
-  `description` text NOT NULL,
-  `image` text NOT NULL,
-  `prix` float NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+  `productid` int(11) NOT NULL AUTO_INCREMENT,
+  `categorie` VARCHAR(255) NOT NULL,
+  `nom_produit` VARCHAR(255) NOT NULL,
+  `description` VARCHAR(255) NOT NULL,
+  `image` VARCHAR(255) NOT NULL,
+  `prix` float NOT NULL,
+    PRIMARY KEY (`productid`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;;
 
 --
 -- Déchargement des données de la table `products`
@@ -60,15 +61,17 @@ INSERT INTO `products` (`productid`, `categorie`, `nom_produit`, `description`, 
 --
 
 CREATE TABLE `users` (
-  `userid` int(11) NOT NULL,
-  `username` text NOT NULL,
-  `password` text NOT NULL,
-  `surname` text ,
-  `name` text ,
-  `email_address` text ,
-  `phone_number` text ,
-  `physical_address` text 
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+  `userid` int(11) NOT NULL AUTO_INCREMENT,
+  `username` VARCHAR(255) NOT NULL,
+  `password` VARCHAR(255) NOT NULL,
+  `surname` VARCHAR(255) DEFAULT NULL ,
+  `name` VARCHAR(255) DEFAULT NULL,
+  `email_address` VARCHAR(255) DEFAULT NULL,
+  `phone_number` VARCHAR(255) DEFAULT NULL,
+  `physical_address` VARCHAR(255) DEFAULT NULL,
+PRIMARY KEY (`userid`)
+
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci; 
 
 --
 -- Déchargement des données de la table `users`
@@ -78,40 +81,65 @@ INSERT INTO `users` (`userid`, `username`, `password`, `surname`, `name`, `email
 (1, 'pseudo', 'mdp', 'surname',  'name', 'email_address', 'phone_number', 'physical_address'),
 (2, 'remi', 'dull', 'surname',  'name', 'email_address', 'phone_number', 'physical_address'),
 (3, 'test', 'test', 'surname',  'name', 'email_address', 'phone_number', 'physical_address');
+INSERT INTO `users` (`userid`, `username`, `password`) VALUES
+(4, 'onlyusername', 'ANDpassword');
 
 --
--- Index pour les tables déchargées
+-- Structure de la table `profil`
 --
 
---
--- Index pour la table `products`
---
-ALTER TABLE `products`
-  ADD PRIMARY KEY (`productid`);
+CREATE TABLE `profil` (
+  `REFERENCE_PROFIL` int(11) NOT NULL AUTO_INCREMENT,
+  `userid` int(11)  NOT NULL UNIQUE,
+  `COORDONNEE_BANCAIRE` VARCHAR(255) ,
+   
+PRIMARY KEY (`REFERENCE_PROFIL`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+ alter table profil add foreign key (userid) references users (userid) on delete restrict ;
 
---
--- Index pour la table `users`
---
-ALTER TABLE `users`
-  ADD PRIMARY KEY (`userid`);
+INSERT INTO `profil` (`REFERENCE_PROFIL`,`userid`) values
+(1,1),
+(2,2);
 
---
--- AUTO_INCREMENT pour les tables déchargées
---
 
---
--- AUTO_INCREMENT pour la table `products`
---
-ALTER TABLE `products`
-  MODIFY `productid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+CREATE TABLE `panier` (
+  `REFERENCE_DU_PANIER` int(11) NOT NULL AUTO_INCREMENT,
+  `userid` int(11)  NOT NULL UNIQUE,-- un panier par client
+   PRIMARY KEY (`REFERENCE_DU_PANIER`)
+) ENGINE=InnoDB AUTO_INCREMENT=0 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+ alter table profil add foreign key (userid) references users (userid) on delete restrict ;
+ create index `DESTINE` on `panier` (`REFERENCE_DU_PANIER`);
 
---
--- AUTO_INCREMENT pour la table `users`
---
-ALTER TABLE `users`
-  MODIFY `userid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+CREATE TABLE `LIGNE_PANIER` (
+  `REFERENCE_LIGNE` int(11) NOT NULL,
+  `REFERENCE_DU_PANIER` int(11) NOT NULL ,
+  `productid` int(11) NOT NULL ,
+  `QUANTITE_DE_PELUCHE` int(11) NOT NULL DEFAULT 0,
+   PRIMARY KEY (`REFERENCE_LIGNE`,REFERENCE_DU_PANIER)
+) ENGINE=InnoDB AUTO_INCREMENT=0 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+ 
+alter table ligne_panier add foreign key (REFERENCE_DU_PANIER) references panier (REFERENCE_DU_PANIER) on delete restrict ;
+ alter table ligne_panier add foreign key (productid) references products (productid) on delete restrict ;
+
+create index `DETAILLER_IDX` on `LIGNE_PANIER` (`REFERENCE_LIGNE`);
+create index `AJOUTER8_AU_PANIER` on `LIGNE_PANIER` (`productid`);
+
+
+insert into panier (`REFERENCE_DU_PANIER`,`userid`) values
+(1,1),
+(2,3);
+
+insert into  LIGNE_PANIER (`REFERENCE_LIGNE`,`REFERENCE_DU_PANIER`,`productid`,`QUANTITE_DE_PELUCHE`) values
+(1,1,1,1),
+(2,1,3,2),
+(3,1,1,1),
+(4,1,2,1),
+(1,2,1,5),
+(2,2,1,4);
+
+
+
 COMMIT;
-
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
