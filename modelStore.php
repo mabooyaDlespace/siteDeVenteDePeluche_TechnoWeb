@@ -15,12 +15,12 @@
 		}
 	}
 
-	function rechercherId($id)
+	function rechercherId($productid)
 	{
 		try{
 			$db = connectDB();
                         $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-			$sql = 'SELECT * FROM products WHERE productid=\''.$id.'\'';
+			$sql = 'SELECT * FROM products WHERE productid=\''.$productid.'\'';
 			$query = $db->query($sql);
 			$data = $query->fetch();
 			$db = null;
@@ -44,7 +44,22 @@
 			echo ('Erreur: ' .$e->getMessage());
 		}
 	}
-
+        
+        function ajouterAuPanierJC($item, $quantite)
+	{
+		try{
+                        
+			$db = connectDB();
+			$sql = 'INSERT INTO paniers(userid, productid, quantite) VALUES (\''.$_SESSION['userid'].'\', \''.$item.'\', \''.$quantite.'\') ';
+			$query = $db->exec($sql);
+			$db = null;
+			return true;
+		}
+		catch (PDOException $e){
+			echo ('Erreur: ' .$e->getMessage());
+		}
+	}
+        
 	function rechercherToutesLesPeluches()
 	{
 		try{
