@@ -35,12 +35,12 @@
 			</div>
 			<div>
 				<img id="evoliScroll" src="../images/evoli.png">
-				<a href="../product.php?id=1"><div id="lienProduit">Evoli</div></a>
+				<a href="../page_product/index.php?productid=1"><div id="lienProduit">Evoli</div></a>
 			</div>
 
 			<div>
 				<img id="evoliScroll" src="../images/pikachu.png">
-				<a href="../product.php?id=3"><div id="lienProduit">Pikachu</div></a>
+				<a href="../page_product/index.php?productid=3"><div id="lienProduit">Pikachu</div></a>
 			</div>
 		</marquee>
 	</div>
