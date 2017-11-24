@@ -21,7 +21,7 @@ require( "../includes/header.php");
 		<?php echo $desc ?>
     </div>
     <div id="box2">
-		<form method="get" action="../panier.php">Quantité <input type="number" value="1" min="1" max="10000" name="quantite">
+		<form method="get" action="../page_panier/index.php">Quantité <input type="number" value="1" min="1" max="10000" name="quantite">
         <br><br><br>
         <div  id="price"><?php echo $price ?>€</div><br>
 		<div id="basket"><?php echo('<input type="hidden" name="id" value="'.$id.'">'); ?><input type="submit" value="Ajouter au panier" id="addbasket"><div><img id="panier1" src="../images/panier-ajout.png"></div></div></form>
