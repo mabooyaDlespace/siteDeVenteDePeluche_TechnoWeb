@@ -19,7 +19,7 @@ require_once dirname(__FILE__).'/checkSession.php';
             <div class="topnav">
                 <a href="<?php echo $absoluteDirectoryName; ?>page_home/index.php"><img src="<?php echo $absoluteDirectoryName; ?>images/logo.png" id="logo" title="Acceuil"></a>
                 <div class="topnavTexts">
-                    <a href="<?php echo $absoluteDirectoryName; ?>pagePresentationDesProduits">Produits</a>
+                    <!--<a href="<?php echo $absoluteDirectoryName; ?>pagePresentationDesProduits">Produits</a>-->
                     <a href="<?php echo $absoluteDirectoryName; ?>page_search/index.php"><img src="<?php echo $absoluteDirectoryName; ?>images/searchlogo.png" id="searchlogo">Recherche</a>
                     <a href="<?php echo $absoluteDirectoryName; ?>page_login/index.php" id="login">Authentification</a>
                 </div>
