@@ -251,7 +251,7 @@ body{
 }
 
 #produit:hover {
-    zoom:150%;
+    zoom: 150%;
     position: fixed;
 }
 
