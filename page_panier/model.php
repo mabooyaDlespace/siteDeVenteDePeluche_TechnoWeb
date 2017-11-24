@@ -24,12 +24,12 @@ function getPanier() {
 }
 
 function panierUtilisateur($userid) {
-	//Permet de récupérer toutes les commandes d'un utilisateur
+	//Permet de récupérer le contenu du panier d'un utilisateur
 	
 	try{
 			$db = connectDB();
                         $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-			$sql = 'SELECT * FROM `products`,`paniers` WHERE `paniers`.`userid`='.$userid.' AND `products`.`productid` = `paniers`.`productid` ORDER BY `paniers`.`orderid`';
+			$sql = 'SELECT `products`.nom_produit,SUM(`paniers`.`quantite`) as quantite,SUM(`products`.`prix` * `paniers`.`quantite`) as prix FROM `products`,`paniers` WHERE `paniers`.`userid`='.$userid.' AND `products`.`productid` = `paniers`.`productid` GROUP BY `products`.`productid`';
 			$query = $db->query($sql);
 			$db = null;
 			return $query;
@@ -43,10 +43,11 @@ function panierUtilisateur($userid) {
 function afficherPanier($reponse) {
     if (!empty($reponse)) {
         ob_start(); 
+		echo('<table><thead><tr><td>Nom de l\'article</td><td>Quantité</td><td>Prix</td></tr>');
         foreach ($reponse as $row) {
-            # code...
-            echo('<tr><td><a href="../page_product/index.php?productid=' . $row['productid'] . '">' . $row['nom_produit'] . '</a></td></tr>');
+            echo('<tr><td>'.$row['nom_produit'].'</td><td>'.$row['quantite'].'</td><td>'.round($row['prix'],2).'€</td></tr>');
         }
+		echo('</table></thead>');
         return ob_get_clean();
     }
-}    
+}

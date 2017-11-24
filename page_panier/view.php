@@ -10,10 +10,12 @@
 <body>
 
 <div id="myheader" > <?php require( "../includes/header.php");?> </div>
-<br><br><br><br>
-<div><?php echo  $msgErreur; ?></div>
+<br>
+<!--<div><?php echo  $msgErreur; ?></div>
 <div><?php echo "Product_id :" . $msgid; ?></div>
-<div><?php echo "Quantite :".$msgquant; ?></div>
+<div><?php echo "Quantite :".$msgquant; ?></div>-->
+
+<?php echo $contenu_panier;?>
 
 <div id="myfooter"> <?php include_once '../includes/footer.html'; ?></div>
 

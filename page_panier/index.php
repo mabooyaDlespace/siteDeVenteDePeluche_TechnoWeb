@@ -13,5 +13,9 @@ $var = getPanier();
 $msgid = $var['msgid'];
 $msgquant = $var['msgquant'];
 $msgErreur =$var['msgErreur'];
+
+$panier = panierUtilisateur($sessionid);
+$contenu_panier = afficherPanier($panier);
+
 require 'view.php';
 
