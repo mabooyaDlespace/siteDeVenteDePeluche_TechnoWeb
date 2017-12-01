@@ -74,4 +74,18 @@
 		}
 	}
 
+	function viderPanier()
+	{
+		try{
+			$db = connectDB();
+			$sql = 'DELETE FROM paniers WHERE userid = \''.$_SESSION['userid'].'\'';
+			$query = $db->exec($sql);
+			$db = null;
+			return true;
+		}
+		catch (PDOException $e){
+			echo ('Erreur: ' .$e->getMessage());
+		}
+	}
+
 ?>

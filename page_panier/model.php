@@ -8,7 +8,7 @@ function getPanier() {
     //$msgquant 
     //$msgErreur 
 
-    if (!empty($_GET['quantite']) && !empty($_GET['id'])){
+    /* if (!empty($_GET['quantite']) && !empty($_GET['id'])){
         $quantite = $_GET['quantite'];
         $id = $_GET['id'];
         $achat = ajouterAuPanier($id, $quantite);
@@ -19,7 +19,7 @@ function getPanier() {
         else{
             $tableau['msgErreur'] = "Erreur";
         }
-    }
+    } */
 	return $tableau;
 }
 
