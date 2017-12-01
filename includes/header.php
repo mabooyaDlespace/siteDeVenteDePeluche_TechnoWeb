@@ -22,12 +22,11 @@ require_once dirname(__FILE__).'/checkSession.php';
 
                     <a href="<?php echo $absoluteDirectoryName; ?>page_search/index.php"><img src="<?php echo $absoluteDirectoryName; ?>images/searchlogo.png" id="searchlogo">Recherche</a>
                     <a href="<?php echo $absoluteDirectoryName; ?>page_panier/index.php"><img src="<?php echo $absoluteDirectoryName; ?>images/panier-ajout.png" id="searchlogo">Panier</a>
-                    <a href="<?php echo $absoluteDirectoryName; ?>page_profil/index.php"><img src="<?php echo $absoluteDirectoryName; ?>images/profil-logo.png" id="searchlogo">Profil</a>
                     <!--<a href="<?php echo $absoluteDirectoryName; ?>pagePresentationDesProduits">Produits</a>-->
                     <a href="<?php echo $absoluteDirectoryName; ?>page_login/index.php" id="login">Authentification</a>
                     
                 </div>
-                <a id="session"> Session :<?php $temp1=returnUserConnection($sessionid);echo $temp1['name']; ?> </a>
+                <a id="session" href="<?php echo $absoluteDirectoryName; ?>page_profil/index.php"> Session :<?php $temp1=returnUserConnection($sessionid);echo $temp1['name']; ?> </a>
                 <?php if ($sessionid == "6"){
                     echo('<a href="../admin.php">Admin</a>');
                 } ?>
