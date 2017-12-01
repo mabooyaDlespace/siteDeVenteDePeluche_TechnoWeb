@@ -38,7 +38,7 @@
     <div id="myheader" > <?php require( "includes/header.php");?> </div>
     <br><br><br><br>
     <div class="container">
-        <form>
+        <form action="../validation.php" method="get">
           <div class="form-group">
             <label for="exampleInputEmail1">Email</label>
             <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
@@ -291,7 +291,8 @@
             </select>
           </div>
           <div class="form-group">
-            <input type="submit" name="Payer">
+            <input type="hidden" name="payer" value="1">
+            <input type="submit" value="Payer">
           </div>
 
     </form>

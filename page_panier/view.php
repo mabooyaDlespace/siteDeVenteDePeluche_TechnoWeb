@@ -17,7 +17,7 @@
 
 <?php echo $contenu_panier;?>
 
-<div><form action="../commander.html">
+<div><form action="../commander.php">
 <input id="commander" type="submit" value="Commander">
 </form></div>
 

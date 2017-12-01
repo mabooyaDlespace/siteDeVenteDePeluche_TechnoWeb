@@ -42,6 +42,14 @@
         }
     }
 
+    if (isset($_GET['payer'])){
+        $vider = viderPanier();
+        if ($vider){
+            $msgValidation = "Commande effectuée.";
+            $redirection = '<a href="/page_commander/index.php">Retour à la page précédente</a>'
+        }
+    }
+
     if (!isset($msgValidation)){
         $msgValidation = "L'opération a échoué.";
     }
