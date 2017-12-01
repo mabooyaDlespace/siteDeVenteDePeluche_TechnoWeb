@@ -19,6 +19,7 @@ $contenu_panier = afficherPanier($panier);
 
 if (isset($_GET['supprimer'])){
 	deleteChoice($_GET['productid']);
+	$panier = panierUtilisateur($sessionid);
 	$contenu_panier = afficherPanier($panier);
 }
 
