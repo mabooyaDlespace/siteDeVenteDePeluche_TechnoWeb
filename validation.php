@@ -28,12 +28,17 @@
     }
 
     if (isset($_GET['ajouterAuPanier'])){
-        $quantite = $_GET['quantite'];
-        $id = $_GET['id'];
-        $achat = ajouterAuPanier($id, $quantite);
-        if ($achat){
-            $msgValidation = "Produit ajouté au panier.";
-            $redirection = '<a href="page_product/index.php?productid='.$id.'">Retour à la page précédente</a>';
+        if ($sessionid != "visiteur"){
+            $quantite = $_GET['quantite'];
+            $id = $_GET['id'];
+            $achat = ajouterAuPanier($id, $quantite);
+            if ($achat){
+                $msgValidation = "Produit ajouté au panier.";
+                $redirection = '<a href="page_product/index.php?productid='.$id.'">Retour à la page précédente</a>';
+            }
+        }
+        else{
+            $msgValidation = "Vous ne pouvez pas commander de produits en tant que visiteur.";
         }
     }
 

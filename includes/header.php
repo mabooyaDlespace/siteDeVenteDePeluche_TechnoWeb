@@ -33,7 +33,9 @@ require_once dirname(__FILE__).'/checkSession.php';
                     
                         }
                     ?>
-                    
+                    <?php if ($sessionid == "6"){
+                    echo('<a id="buttonadmin" href="../admin.php">Admin</a>');
+                } ?>
                 </div>
                 <?php
 
@@ -44,9 +46,7 @@ require_once dirname(__FILE__).'/checkSession.php';
 
                 ?>
                 
-                <?php if ($sessionid == "6"){
-                    echo('<a id="buttonadmin" href="../admin.php">Admin</a>');
-                } ?>
+               
                     <!-- <a href="<?php echo $absoluteDirectoryName; ?>page_login/index.php" id="login">Authentification</a>
 
                     <?php if ($sessionid == "6"){
@@ -54,6 +54,8 @@ require_once dirname(__FILE__).'/checkSession.php';
                     } ?> -->
                     
                 </div>
+
+
                 <!-- <a id="session" href="<?php echo $absoluteDirectoryName; ?>page_profil/index.php"> Session :<?php $temp1=returnUserConnection($sessionid);echo $temp1['name']; ?> </a> -->
             </div>
         </header>
