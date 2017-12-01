@@ -1,5 +1,5 @@
 <?php
-$absoluteDirectoryName="/sitedeventedepeluche_technoweb/";
+$absoluteDirectoryName="/phpwebsite/";
 require_once dirname(__FILE__).'/../database.php';
 require_once dirname(__FILE__).'/../session.php';
 require_once dirname(__FILE__).'/../user.php';

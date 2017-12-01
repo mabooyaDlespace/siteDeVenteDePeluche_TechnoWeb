@@ -119,11 +119,11 @@ CREATE TABLE IF NOT EXISTS `users` (
   `userid` int(11) NOT NULL AUTO_INCREMENT,
   `username` text NOT NULL,
   `password` text NOT NULL,
-  `physical_address` text NOT NULL,
-  `phone_number` text NOT NULL,
-  `email_address` text NOT NULL,
-  `name` text NOT NULL,
-  `surname` text NOT NULL,
+  `physical_address` text ,
+  `phone_number` text ,
+  `email_address` text ,
+  `name` text ,
+  `surname` text ,
   PRIMARY KEY (`userid`)
 ) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
 
