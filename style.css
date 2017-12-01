@@ -5,6 +5,7 @@
     top: 0;
     width: 100%;
     left: 0;
+    z-index: 2;
 }
 
 #panier {
@@ -235,6 +236,7 @@ body{
 #msg {
     text-align: right;
     margin-top: 30px;
+    margin-right: 10px;
 }
 
 #msglogin {
@@ -346,4 +348,14 @@ body{
     float: right;
 }
 
-/* Slider */
+/* Home Image */
+
+
+#homebox {
+    width: 1150px;
+    position: absolute;
+    margin: -450px 5px 5px 200px;
+    box-shadow: 0px 5px 7px 1px rgba(0,50,200,0.35);
+
+
+}
