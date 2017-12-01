@@ -354,8 +354,7 @@ body{
 #homebox {
     width: 1150px;
     position: absolute;
-    margin: -450px 5px 5px 200px;
+    margin: -400px 5px 5px 200px;
     box-shadow: 0px 5px 7px 1px rgba(0,50,200,0.35);
-
 
 }
