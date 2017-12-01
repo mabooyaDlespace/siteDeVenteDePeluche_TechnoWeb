@@ -27,14 +27,13 @@ require_once dirname(__FILE__).'/checkSession.php';
                     </div>
                     <!--<a href="<?php echo $absoluteDirectoryName; ?>pagePresentationDesProduits">Produits</a>-->
                     <a href="<?php echo $absoluteDirectoryName; ?>page_login/index.php" id="login">Authentification</a>
-                    
-                </div>
-                <a id="session" href="<?php echo $absoluteDirectoryName; ?>page_profil/index.php"> Session :<?php $temp1=returnUserConnection($sessionid);echo $temp1['name']; ?> </a>
-                <div>
+
                     <?php if ($sessionid == "6"){
                         echo('<a id="buttonadmin" href="../admin.php">Admin</a>');
                     } ?>
+                    
                 </div>
+                <a id="session" href="<?php echo $absoluteDirectoryName; ?>page_profil/index.php"> Session :<?php $temp1=returnUserConnection($sessionid);echo $temp1['name']; ?> </a>
             </div>
         </header>
     </body>
