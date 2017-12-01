@@ -7,6 +7,10 @@
     left: 0;
 }
 
+#panier {
+    float: right;
+}
+
 /* Barre de navigation */
 
 @font-face {
@@ -78,18 +82,17 @@ font-style: normal;
     float: right;
 }
 
-/* Image loupe */
+/* Images header */
 
-#searchlogo {
+#searchlogo, #panierlogo {
     height: 15px;
     width: 15px;
     padding-right: 5px;
 }
 
-
 /* Logo du site */
 
-#logo {
+#homelogo {
     height: 30px;
     width: 30px;
     float: left;
