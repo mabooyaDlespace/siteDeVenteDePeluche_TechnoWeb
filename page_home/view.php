@@ -45,7 +45,7 @@
 		</marquee>
 	</div>
 
-	<form>
+	<form class ="slider">
 		<input type="radio" name="fancy" autofocus value="clubs" id="clubs" />
 		<input type="radio" name="fancy" value="hearts" id="hearts" />
 		<input type="radio" name="fancy" value="spades" id="spades" />

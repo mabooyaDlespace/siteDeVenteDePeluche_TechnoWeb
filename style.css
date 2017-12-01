@@ -366,7 +366,7 @@ label {
     line-height: 100vh;
 }
 
-form {
+.slider {
     position: center;
     top: 0;
     left: 0;
