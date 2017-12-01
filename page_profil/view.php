@@ -37,7 +37,6 @@ require( "../includes/header.php");
  
         </form>
         <?php echo $username; ?>
-<?php echo $lolol; ?>
 
         <div id="msglogin"><?php echo $msgErreurConnexion ?></div>
         <div id="msglogin"><?php echo $msgErreurInscription ?></div>
