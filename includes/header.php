@@ -30,9 +30,11 @@ require_once dirname(__FILE__).'/checkSession.php';
                     
                 </div>
                 <a id="session" href="<?php echo $absoluteDirectoryName; ?>page_profil/index.php"> Session :<?php $temp1=returnUserConnection($sessionid);echo $temp1['name']; ?> </a>
-                <?php if ($sessionid == "6"){
-                    echo('<a href="../admin.php">Admin</a>');
-                } ?>
+                <div>
+                    <?php if ($sessionid == "6"){
+                        echo('<a id="buttonadmin" href="../admin.php">Admin</a>');
+                    } ?>
+                </div>
             </div>
         </header>
     </body>

@@ -340,3 +340,8 @@ body{
     text-align : center;
     padding-bottom: 20px;
 }
+
+/* Bouton admin */
+#buttonadmin {
+    float: right;
+}
