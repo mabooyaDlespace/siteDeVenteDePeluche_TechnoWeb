@@ -50,7 +50,7 @@ require_once dirname(__FILE__).'/checkSession.php';
                     <!-- <a href="<?php echo $absoluteDirectoryName; ?>page_login/index.php" id="login">Authentification</a>
 
                     <?php if ($sessionid == "6"){
-                        echo('');
+                        echo('<a id="buttonadmin" href="../admin.php">Admin</a>');
                     } ?> -->
                     
                 </div>
