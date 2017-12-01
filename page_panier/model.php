@@ -30,6 +30,7 @@ function panierUtilisateur($userid) {
 			$db = connectDB();
                         $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 			$sql = 'SELECT `products`.nom_produit,SUM(`paniers`.`quantite`) as quantite,SUM(`products`.`prix` * `paniers`.`quantite`) as prix FROM `products`,`paniers` WHERE `paniers`.`userid`='.$userid.' AND `products`.`productid` = `paniers`.`productid` GROUP BY `products`.`productid`';
+			//Cette requête SQL récupère toutes les commandes de l'utilisateur actuellement connecté, et calcule le prix de chacun des produits commandés en fonction de la quantité choisie.
 			$query = $db->query($sql);
 			$db = null;
 			return $query;

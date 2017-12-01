@@ -3,7 +3,7 @@
 	session_start();
 
 	define('DB_SERVER', 'localhost');
-	define('DB_NAME', 'test_site');
+	define('DB_NAME', 'dbpeluches');
 	define('DB_USER', 'root');
 	define('DB_PASSWORD', '');
 
