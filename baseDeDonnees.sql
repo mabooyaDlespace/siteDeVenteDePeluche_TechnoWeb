@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  ven. 24 nov. 2017 à 19:37
+-- Généré le :  ven. 01 déc. 2017 à 14:14
 -- Version du serveur :  5.7.19
 -- Version de PHP :  5.6.31
 
@@ -19,8 +19,10 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de données :  `test_site`
+-- Base de données :  `dbpeluches`
 --
+CREATE DATABASE IF NOT EXISTS `dbpeluches` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
+USE `dbpeluches`;
 
 -- --------------------------------------------------------
 
@@ -35,7 +37,7 @@ CREATE TABLE IF NOT EXISTS `paniers` (
   `productid` int(11) NOT NULL,
   `quantite` int(11) NOT NULL,
   PRIMARY KEY (`orderid`)
-) ENGINE=MyISAM AUTO_INCREMENT=60 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=61 DEFAULT CHARSET=latin1;
 
 --
 -- Déchargement des données de la table `paniers`
@@ -72,7 +74,8 @@ INSERT INTO `paniers` (`orderid`, `userid`, `productid`, `quantite`) VALUES
 (56, 5, 5, 1),
 (57, 5, 5, 1),
 (58, 4, 8, 15),
-(59, 4, 5, 10);
+(59, 4, 5, 10),
+(60, 5, 6, 1);
 
 -- --------------------------------------------------------
 
@@ -116,6 +119,11 @@ CREATE TABLE IF NOT EXISTS `users` (
   `userid` int(11) NOT NULL AUTO_INCREMENT,
   `username` text NOT NULL,
   `password` text NOT NULL,
+  `physical_address` text NOT NULL,
+  `phone_number` text NOT NULL,
+  `email_address` text NOT NULL,
+  `name` text NOT NULL,
+  `surname` text NOT NULL,
   PRIMARY KEY (`userid`)
 ) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
 
@@ -123,12 +131,36 @@ CREATE TABLE IF NOT EXISTS `users` (
 -- Déchargement des données de la table `users`
 --
 
-INSERT INTO `users` (`userid`, `username`, `password`) VALUES
-(1, 'pseudo', 'mdp'),
-(2, 'remi', 'dull'),
-(3, 'test', 'test'),
-(4, 'DavidLaFarge', 'MissJirachi'),
-(5, 'Loic', 'Loic');
+INSERT INTO `users` (`userid`, `username`, `password`, `physical_address`, `phone_number`, `email_address`, `name`, `surname`) VALUES
+(1, 'pseudo', 'mdp', '', '', '', '', ''),
+(2, 'remi', 'dull', '', '', '', '', ''),
+(3, 'test', 'test', '', '', '', '', ''),
+(4, 'DavidLaFarge', 'MissJirachi', '', '', '', '', ''),
+(5, 'Loic', 'Loic', '', '', '', '', '');
+--
+-- Base de données :  `names`
+--
+CREATE DATABASE IF NOT EXISTS `names` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
+USE `names`;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `name`
+--
+
+DROP TABLE IF EXISTS `name`;
+CREATE TABLE IF NOT EXISTS `name` (
+  `name` text CHARACTER SET utf8 NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Déchargement des données de la table `name`
+--
+
+INSERT INTO `name` (`name`) VALUES
+('Hello'),
+('Loic');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

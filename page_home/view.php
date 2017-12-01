@@ -45,8 +45,6 @@
 		</marquee>
 	</div>
 
-
-
 	<div id="myfooter"> <?php include_once '../includes/footer.html'; ?></div>
 </body>
 </html>
