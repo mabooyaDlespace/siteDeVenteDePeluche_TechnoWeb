@@ -1,5 +1,5 @@
 <?php
-$absoluteDirectoryName="/phpwebsite/";
+$absoluteDirectoryName="/sitedeventedepeluche_technoweb/";
 require_once dirname(__FILE__).'/../database.php';
 require_once dirname(__FILE__).'/../session.php';
 require_once dirname(__FILE__).'/../user.php';
@@ -24,6 +24,9 @@ require_once dirname(__FILE__).'/checkSession.php';
                     <a href="<?php echo $absoluteDirectoryName; ?>page_login/index.php" id="login">Authentification</a>
                 </div>
                 <a id="session"> Session :<?php $temp1=returnUserConnection($sessionid);echo $temp1['name']; ?> </a>
+                <?php if ($sessionid == "6"){
+                    echo('<a href="../admin.php">Admin</a>');
+                } ?>
             </div>
         </header>
     </body>
