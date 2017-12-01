@@ -21,9 +21,9 @@ require_once dirname(__FILE__).'/checkSession.php';
                 <div class="topnavTexts">
 
                     <a href="<?php echo $absoluteDirectoryName; ?>page_search/index.php"><img src="<?php echo $absoluteDirectoryName; ?>images/searchlogo.png" id="searchlogo">Recherche</a>
-                    <a href="<?php echo $absoluteDirectoryName; ?>page_search/index.php"><img src="<?php echo $absoluteDirectoryName; ?>images/panier-ajout.png" id="basketlogo">Panier</a>
-                    <a href="<?php echo $absoluteDirectoryName; ?>page_search/index.php"><img src="<?php echo $absoluteDirectoryName; ?>images/profil-logo.png" id="basketlogo">Profil</a>
-                    <a href="<?php echo $absoluteDirectoryName; ?>pagePresentationDesProduits">Produits</a>
+                    <a href="<?php echo $absoluteDirectoryName; ?>page_panier/index.php"><img src="<?php echo $absoluteDirectoryName; ?>images/panier-ajout.png" id="searchlogo">Panier</a>
+                    <a href="<?php echo $absoluteDirectoryName; ?>page_profil/index.php"><img src="<?php echo $absoluteDirectoryName; ?>images/profil-logo.png" id="searchlogo">Profil</a>
+                    <!--<a href="<?php echo $absoluteDirectoryName; ?>pagePresentationDesProduits">Produits</a>-->
                     <a href="<?php echo $absoluteDirectoryName; ?>page_login/index.php" id="login">Authentification</a>
                     
                 </div>
