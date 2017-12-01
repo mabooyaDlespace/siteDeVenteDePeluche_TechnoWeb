@@ -17,6 +17,10 @@
 
 <?php echo $contenu_panier;?>
 
+<div><form action="../commander.html">
+<input id="commander" type="submit" value="Commander">
+</form></div>
+
 <div id="myfooter"> <?php include_once '../includes/footer.html'; ?></div>
 
 </body>
