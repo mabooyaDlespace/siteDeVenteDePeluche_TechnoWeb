@@ -42,7 +42,7 @@
           <div class="form-group">
             <label for="exampleInputEmail1">Email</label>
             <input required type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
-            <small id="emailHelp" class="form-text text-muted">Nous partagerons pas vos coordonées personelle</small>
+            <small id="emailHelp" class="form-text text-muted">Nous ne partagerons pas vos coordonnées personnelles</small>
           </div>
           <div class="form-group">
             <label for="exampleInputPassword1">Adresse</label>
