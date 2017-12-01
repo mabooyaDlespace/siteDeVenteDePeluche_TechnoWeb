@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  ven. 01 déc. 2017 à 16:22
+-- Généré le :  ven. 01 déc. 2017 à 16:30
 -- Version du serveur :  5.7.19
 -- Version de PHP :  5.6.31
 
@@ -44,7 +44,7 @@ CREATE TABLE IF NOT EXISTS `products` (
 --
 
 INSERT INTO `products` (`productid`, `categorie`, `nom_produit`, `description`, `image`, `prix`) VALUES
-(1, 'peluches', 'Peluche Evoli', 'Decouvrez Evoli, un des personnages préférés de la saga Pokémon !\r\nLa peluche Evoli de 20 cm et toutes ses evolutions enfin disponibles !', 'evoli', 30.99),
+(1, 'peluches', 'Peluche Evoli', 'Decouvrez Evoli, un des personnages preferes de la saga Pokemon !\r\nLa peluche Evoli de 20 cm et toutes ses evolutions enfin disponibles !', 'evoli', 30.99),
 (2, 'peluches', 'Une autre peluche Evoli', 'Bla Bla Bla', 'evoli', 40.99),
 (3, 'peluches', 'Peluche Pikachu', 'Bla Bla Bla', 'pikachu', 50.99),
 (4, 'peluches', 'Peluche Pikachu', 'Bla Bla Bla (bis)', 'pikachu', 50.99),

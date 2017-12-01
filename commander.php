@@ -46,7 +46,7 @@
           </div>
           <div class="form-group">
             <label for="exampleInputPassword1">Adresse</label>
-            <input required class="form-control" id="exampleInputPassword1" placeholder="4 Rue d'alice au pays des merveilles">
+            <input required class="form-control" id="exampleInputPassword1" placeholder="4 Rue d'Alice au Pays des Merveilles">
           </div>
           <div class="form-group">
             <label for="exampleInputPassword1">Ville</label>
