@@ -38,27 +38,27 @@
     <div id="myheader" > <?php require( "includes/header.php");?> </div>
     <br><br><br><br>
     <div class="container">
-        <form action="../validation.php" method="get">
+        <form action="validation.php" method="get">
           <div class="form-group">
             <label for="exampleInputEmail1">Email</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
+            <input required type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
             <small id="emailHelp" class="form-text text-muted">Nous partagerons pas vos coordonées personelle</small>
           </div>
           <div class="form-group">
             <label for="exampleInputPassword1">Adresse</label>
-            <input class="form-control" id="exampleInputPassword1" placeholder="4 Rue d'alice au pays des merveilles">
+            <input required class="form-control" id="exampleInputPassword1" placeholder="4 Rue d'alice au pays des merveilles">
           </div>
           <div class="form-group">
             <label for="exampleInputPassword1">Ville</label>
-            <input class="form-control" id="exampleInputPassword1" placeholder="Lille">
+            <input required class="form-control" id="exampleInputPassword1" placeholder="Lille">
           </div>
           <div class="form-group">
             <label for="exampleInputPassword1">Code Postal</label>
-            <input class="form-control" id="exampleInputPassword1" placeholder="59800">
+            <input required class="form-control" id="exampleInputPassword1" placeholder="59800">
           </div>
           <div class="form-group">
             <label for="exampleSelect1">Pays</label>
-            <select class="form-control" id="exampleSelect1">
+            <select required class="form-control" id="exampleSelect1">
                 <option value="France" selected="selected">France </option>
                 <option value="Afghanistan">Afghanistan </option>
                 <option value="Afrique_Centrale">Afrique Centrale </option>
