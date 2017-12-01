@@ -44,7 +44,9 @@
 			</div>
 		</marquee>
 	</div>
-
+	<div>
+		<img id="homebox" src="../images/peluches-pokemon.jpg">
+	</div>
 	<div id="myfooter"> <?php include_once '../includes/footer.html'; ?></div>
 </body>
 </html>
