@@ -17,5 +17,10 @@ $msgErreur =$var['msgErreur'];
 $panier = panierUtilisateur($sessionid);
 $contenu_panier = afficherPanier($panier);
 
+if (isset($_GET['supprimer'])){
+	deleteChoice($_GET['productid']);
+	$contenu_panier = afficherPanier($panier);
+}
+
 require 'view.php';
 

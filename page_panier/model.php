@@ -29,7 +29,7 @@ function panierUtilisateur($userid) {
 	try{
 			$db = connectDB();
                         $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-			$sql = 'SELECT `products`.nom_produit,SUM(`paniers`.`quantite`) as quantite,SUM(`products`.`prix` * `paniers`.`quantite`) as prix FROM `products`,`paniers` WHERE `paniers`.`userid`='.$userid.' AND `products`.`productid` = `paniers`.`productid` GROUP BY `products`.`productid`';
+			$sql = 'SELECT `products`.productid, `products`.nom_produit,SUM(`paniers`.`quantite`) as quantite,SUM(`products`.`prix` * `paniers`.`quantite`) as prix FROM `products`,`paniers` WHERE `paniers`.`userid`='.$userid.' AND `products`.`productid` = `paniers`.`productid` GROUP BY `products`.`productid`';
 			$query = $db->query($sql);
 			$db = null;
 			return $query;
@@ -45,9 +45,27 @@ function afficherPanier($reponse) {
         ob_start(); 
 		echo('<table><thead><tr><td>Nom de l\'article</td><td>Quantité</td><td>Prix</td></tr>');
         foreach ($reponse as $row) {
-            echo('<tr><td>'.$row['nom_produit'].'</td><td>'.$row['quantite'].'</td><td>'.round($row['prix'],2).'€</td></tr>');
+            echo('<tr><form method="get"><td>'.$row['nom_produit'].'</td><td>'.$row['quantite'].'</td><td>'.round($row['prix'],2).'€</td><td><input type="hidden" name="productid" value="'.$row['productid'].'"><input type="submit" name="supprimer" value="Supprimer"></td></form></tr>');
         }
 		echo('</table></thead>');
         return ob_get_clean();
     }
+}
+
+function deleteChoice($productid) {
+    try{
+            $db = connectDB();
+            if(rechercherId($productid) != null){
+                $sql = 'DELETE FROM paniers WHERE (productid = \''.$productid.'\' AND userid = \''.$_SESSION['userid'].'\')';
+                $query = $db->exec($sql);
+                $db = null;
+                return true;
+            }
+            else{
+                return false;
+            }
+        }
+        catch (PDOException $e){
+            echo ('Erreur: ' .$e->getMessage());
+        }
 }
