@@ -159,11 +159,11 @@ footer{
 
 [type='text'],[type='password']{
     width:150px;
-   // min-width: 100px;
+    min-width: 100px;
     height: 35px;
     border: 2px solid black;
     padding-left: 10px;
-    //box-shadow: 4px 4px 6px black;
+    box-shadow: 4px 4px 6px black;
     font-style: italic;
     box-shadow: 0px 5px 7px 1px rgba(0,50,200,0.35)        
 }
@@ -183,6 +183,7 @@ form{
 /*Message de login et statut de connexion*/
 #msg {
     text-align: right;
+    font-family: hangar;
     margin-top: 30px;
     margin-right: 10px;
 }
@@ -192,6 +193,44 @@ form{
     margin-right: auto;
     padding-top: 10px;
     width: 300px;
+}
+
+/* Page Home */
+#titleHomeScroll, #titleNoveltyScroll {
+    font-weight : bold;
+    text-align: center;
+    text-decoration: underline;
+    padding-bottom: 20px;
+}
+
+#textHomeScroll {
+    text-align: center;
+}
+
+#entname {
+    margin-top: 60px;
+    font-size: 60px; 
+    text-align: center;
+    font-family:"3dumbregular";
+}
+
+
+#peluchesScroll {
+    max-width: 100%;
+    height: auto;
+}
+
+#lienProduit {
+    text-align : center;
+    padding-bottom: 20px;
+}
+
+/* Home Image */
+#homeImage {
+    width: 1150px;
+    position: absolute;
+    margin: -400px 5px 5px 200px;
+    box-shadow: 0px 5px 7px 1px rgba(0,50,200,0.35);
 }
 
 /*Page recherche*/
@@ -255,36 +294,6 @@ form{
     text-align: center;
 }
 
-/*Image produit*/
-#produit {
-    position: absolute;
-    background-color: white;
-    margin: 100px 0px 0px 50px;
-    border: 1px solid;
-    width: 200px;
-    height: auto; 
-}
-
-.image img {
-    position: relative;
-    /* La transition s'applique à la fois sur la largeur et la hauteur, avec une durée d'une seconde. */
-    -webkit-transition: all 1s ease; /* Safari et Chrome */
-    -moz-transition: all 1s ease; /* Firefox */
-    -ms-transition: all 1s ease; /* Internet Explorer 9 */
-    -o-transition: all 1s ease; /* Opera */
-    transition: all 1s ease;
-}
-.image:hover img {
-    /* L'image est grossie de 25% */
-    -webkit-transform:scale(1.25); /* Safari et Chrome */
-    -moz-transform:scale(1.25); /* Firefox */
-    -ms-transform:scale(1.25); /* Internet Explorer 9 */
-    -o-transform:scale(1.25); /* Opera */
-    transform:scale(1.25);
-}
-
-
-
 /* Mise en page des informations du produit */
 table{
     border: 2px solid black;
@@ -317,43 +326,31 @@ td{
     margin-bottom: 10px;
 }
 
-
-/* Page Home */
-#titleHomeScroll, #titleNoveltyScroll {
-    font-weight : bold;
-    text-align: center;
-    text-decoration: underline;
-    padding-bottom: 20px;
-}
-
-#textHomeScroll {
-    text-align: center;
-}
-
-#entname {
-    margin-top: 60px;
-    font-size: 38px; 
-    text-align: center;
-    z-index: 1;
-}
-
-
-#peluchesScroll {
-    max-width: 100%;
-    height: auto;
-}
-
-#lienProduit {
-    text-align : center;
-    padding-bottom: 20px;
-}
-
-/* Home Image */
-#homeImage {
-    width: 1150px;
+/*Image produit*/
+#produit {
     position: absolute;
-    margin: -400px 5px 5px 200px;
-    box-shadow: 0px 5px 7px 1px rgba(0,50,200,0.35);
+    background-color: white;
+    margin: 100px 0px 0px 50px;
+    border: 1px solid;
+    width: 200px;
+    height: auto; 
 }
 
+.image img {
+    position: relative;
+    /* La transition s'applique à la fois sur la largeur et la hauteur, avec une durée d'une seconde. */
+    -webkit-transition: all 1s ease; /* Safari et Chrome */
+    -moz-transition: all 1s ease; /* Firefox */
+    -ms-transition: all 1s ease; /* Internet Explorer 9 */
+    -o-transition: all 1s ease; /* Opera */
+    transition: all 1s ease;
+}
+.image:hover img {
+    /* L'image est grossie de 25% */
+    -webkit-transform:scale(1.25); /* Safari et Chrome */
+    -moz-transform:scale(1.25); /* Firefox */
+    -ms-transform:scale(1.25); /* Internet Explorer 9 */
+    -o-transform:scale(1.25); /* Opera */
+    transform:scale(1.25);
+}
 
