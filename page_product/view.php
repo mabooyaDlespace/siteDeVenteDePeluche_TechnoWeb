@@ -14,14 +14,17 @@
 require( "../includes/header.php");
 ?>
         </div>
-    
-	<div><?php echo('<img src="../images/'.$image.'.png" id="produit">') ?></div>
+    <div class=zoom>
+ 		<div class=image>
+ 			<?php echo('<img src="../images/'.$image.'.png" id="produit">') ?>
+ 		</div>
+	</div>
 	<H1 id="box1"><?php echo $name ?></H1>
-    <div id="box3">Description du produit : <br><br>
+    <div id="box3"><span id="titreSection">Description du produit : </span><br><br>
 		<?php echo $desc ?>
     </div>
     <div id="box2">
-		<form method="get" action="../validation.php">Quantité <input type="number" value="1" min="1" max="10000" name="quantite">
+		<form method="get" action="../validation.php"><span id="quantite">Quantité  : </span><input type="number" value="1" min="1" max="10000" name="quantite">
         <br><br><br>
         <div  id="price"><?php echo $price ?>€</div><br>
 		<div id="basket"><?php echo('<input type="hidden" name="id" value="'.$id.'">'); ?><input type="hidden" name="ajouterAuPanier" value="1"><input type="submit" value="Ajouter au panier" id="addbasket"><div><img id="panier1" src="../images/panier-ajout.png"></div></div></form>
