@@ -13,7 +13,7 @@
 	</div>
 
 	<div id="entname">Fluff'n'Stuff</div>
-	<br>
+	<br><br><br>
 	<div>
 		<marquee onmouseover="this.stop()" onmouseout="this.start()" scrollamount="1.5" scrolldelay="0" direction="up" behavior="scroll" height="60">
 			<div id="titleHomeScroll">
