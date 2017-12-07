@@ -46,7 +46,7 @@
         $vider = viderPanier();
         if ($vider){
             $msgValidation = "Commande effectuée.";
-            $redirection = '<a href="commander.php">Retour à la page précédente</a>';
+            $redirection = '<a href="page_panier/index.php">Retour au panier</a>';
         }
     }
 

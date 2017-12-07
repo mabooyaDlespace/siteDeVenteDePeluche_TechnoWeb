@@ -22,9 +22,18 @@ require_once dirname(__FILE__).'/checkSession.php';
 
                     <a href="<?php echo $absoluteDirectoryName; ?>page_search/index.php"><img src="<?php echo $absoluteDirectoryName; ?>images/searchlogo.png" id="searchlogo">Recherche</a>
 
-                    <div id="panier">
+                    <?php
+
+                        if ($sessionid != "visiteur"){
+                            echo('<div id="panier">
+                            <a href="'.$absoluteDirectoryName.'page_panier/index.php"><img src="'.$absoluteDirectoryName.'images/panier-ajout.png" id="panierlogo">Panier</a>
+                        </div>');
+                        }
+
+                    ?>
+                    <!-- <div id="panier">
                         <a href="<?php echo $absoluteDirectoryName; ?>page_panier/index.php"><img src="<?php echo $absoluteDirectoryName; ?>images/panier-ajout.png" id="panierlogo">Panier</a>
-                    </div>
+                    </div> -->
                     <!--<a href="<?php echo $absoluteDirectoryName; ?>pagePresentationDesProduits">Produits</a>-->
                     <?php
 
