@@ -43,7 +43,7 @@ require_once dirname(__FILE__).'/checkSession.php';
                         }
                     ?>
                     <?php if ($sessionid == "6"){
-                    echo('<a id="buttonadmin" href="../admin.php">Admin</a>');
+                    echo('<a id="buttonadmin" href="'.$absoluteDirectoryName.'admin.php">Admin</a>');
                 } ?>
                 </div>
                 <?php
@@ -59,7 +59,7 @@ require_once dirname(__FILE__).'/checkSession.php';
                     <!-- <a href="<?php echo $absoluteDirectoryName; ?>page_login/index.php" id="login">Authentification</a>
 
                     <?php if ($sessionid == "6"){
-                        echo('<a id="buttonadmin" href="../admin.php">Admin</a>');
+                        echo('<a id="buttonadmin" href="'.$absoluteDirectoryName.'admin.php">Admin</a>');
                     } ?> -->
                     
                 </div>

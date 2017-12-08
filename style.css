@@ -345,6 +345,7 @@ td{
     -o-transition: all 1s ease; /* Opera */
     transition: all 1s ease;
 }
+
 .image:hover img {
     /* L'image est grossie de 25% */
     -webkit-transform:scale(1.25); /* Safari et Chrome */
