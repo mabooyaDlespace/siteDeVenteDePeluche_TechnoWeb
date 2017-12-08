@@ -137,6 +137,7 @@ INSERT INTO `users` (`userid`, `username`, `password`, `physical_address`, `phon
 (3, 'test', 'test', '', '', '', '', ''),
 (4, 'DavidLaFarge', 'MissJirachi', '', '', '', '', ''),
 (5, 'Loic', 'Loic', '', '', '', '', '');
+(6, 'Admin', 'admin', '', '', '', '', '');
 --
 -- Base de données :  `names`
 --
