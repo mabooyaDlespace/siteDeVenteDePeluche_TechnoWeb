@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  ven. 01 déc. 2017 à 16:30
+-- Généré le :  ven. 01 déc. 2017 à 14:14
 -- Version du serveur :  5.7.19
 -- Version de PHP :  5.6.31
 
@@ -21,6 +21,61 @@ SET time_zone = "+00:00";
 --
 -- Base de données :  `dbpeluches`
 --
+CREATE DATABASE IF NOT EXISTS `dbpeluches` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
+USE `dbpeluches`;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `paniers`
+--
+
+DROP TABLE IF EXISTS `paniers`;
+CREATE TABLE IF NOT EXISTS `paniers` (
+  `orderid` int(11) NOT NULL AUTO_INCREMENT,
+  `userid` int(11) NOT NULL,
+  `productid` int(11) NOT NULL,
+  `quantite` int(11) NOT NULL,
+  PRIMARY KEY (`orderid`)
+) ENGINE=MyISAM AUTO_INCREMENT=61 DEFAULT CHARSET=latin1;
+
+--
+-- Déchargement des données de la table `paniers`
+--
+
+INSERT INTO `paniers` (`orderid`, `userid`, `productid`, `quantite`) VALUES
+(47, 5, 5, 1),
+(46, 5, 5, 1),
+(45, 5, 5, 10),
+(44, 5, 6, 4),
+(43, 5, 6, 9),
+(42, 5, 6, 6),
+(41, 5, 1, 8),
+(40, 5, 1, 10),
+(39, 4, 1, 4),
+(38, 4, 1, 16),
+(37, 4, 2, 15),
+(36, 5, 1, 24),
+(35, 5, 1, 1),
+(34, 5, 1, 1),
+(33, 5, 1, 1),
+(32, 5, 1, 8),
+(31, 5, 1, 8),
+(30, 5, 1, 14),
+(29, 5, 1, 1),
+(48, 5, 5, 1),
+(49, 5, 5, 1),
+(50, 5, 5, 1),
+(51, 5, 5, 1),
+(52, 5, 5, 1),
+(53, 5, 5, 1),
+(54, 5, 5, 1),
+(55, 5, 5, 1),
+(56, 5, 5, 1),
+(57, 5, 5, 1),
+(58, 4, 8, 15),
+(59, 4, 5, 10),
+(60, 5, 6, 1);
 
 -- --------------------------------------------------------
 
@@ -44,7 +99,7 @@ CREATE TABLE IF NOT EXISTS `products` (
 --
 
 INSERT INTO `products` (`productid`, `categorie`, `nom_produit`, `description`, `image`, `prix`) VALUES
-(1, 'peluches', 'Peluche Evoli', 'Decouvrez Evoli, un des personnages preferes de la saga Pokemon !\r\nLa peluche Evoli de 20 cm et toutes ses evolutions enfin disponibles !', 'evoli', 30.99),
+(1, 'peluches', 'Peluche Evoli', 'Decouvrez Evoli, un des personnages prefere de la saga Pokemon.\r\nLa peluche Evoli de 20 cm et toutes ses evolutions enfin disponible !', 'evoli', 30.99),
 (2, 'peluches', 'Une autre peluche Evoli', 'Bla Bla Bla', 'evoli', 40.99),
 (3, 'peluches', 'Peluche Pikachu', 'Bla Bla Bla', 'pikachu', 50.99),
 (4, 'peluches', 'Peluche Pikachu', 'Bla Bla Bla (bis)', 'pikachu', 50.99),
@@ -52,6 +107,60 @@ INSERT INTO `products` (`productid`, `categorie`, `nom_produit`, `description`, 
 (6, 'peluches', 'Peluche Aquali', 'Bla Bla Bla (bis)', 'aquali', 30.99),
 (7, 'peluches', 'Peluche Pyroli', 'Bla Bla Bla (bis)', 'pyroli', 30.99),
 (8, 'peluches', 'Peluche Voltali', 'Bla Bla Bla (bis)', 'voltali', 30.99);
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `users`
+--
+
+DROP TABLE IF EXISTS `users`;
+CREATE TABLE IF NOT EXISTS `users` (
+  `userid` int(11) NOT NULL AUTO_INCREMENT,
+  `username` text NOT NULL,
+  `password` text NOT NULL,
+  `physical_address` text ,
+  `phone_number` text ,
+  `email_address` text ,
+  `name` text ,
+  `surname` text ,
+  PRIMARY KEY (`userid`)
+) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+
+--
+-- Déchargement des données de la table `users`
+--
+
+INSERT INTO `users` (`userid`, `username`, `password`, `physical_address`, `phone_number`, `email_address`, `name`, `surname`) VALUES
+(1, 'pseudo', 'mdp', '', '', '', '', ''),
+(2, 'remi', 'dull', '', '', '', '', ''),
+(3, 'test', 'test', '', '', '', '', ''),
+(4, 'DavidLaFarge', 'MissJirachi', '', '', '', '', ''),
+(5, 'Loic', 'Loic', '', '', '', '', '');
+--
+-- Base de données :  `names`
+--
+CREATE DATABASE IF NOT EXISTS `names` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
+USE `names`;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `name`
+--
+
+DROP TABLE IF EXISTS `name`;
+CREATE TABLE IF NOT EXISTS `name` (
+  `name` text CHARACTER SET utf8 NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Déchargement des données de la table `name`
+--
+
+INSERT INTO `name` (`name`) VALUES
+('Hello'),
+('Loic');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
