@@ -22,7 +22,7 @@ $email = $tablo[6];
 $phoneNumber = $tablo[5];
 $physicalAddress = $tablo[4];
 $password = $tablo[3];
-
+$var = validationModif();	
 /*
 $username = userName($sessionid);
 $name = name($sessionid);

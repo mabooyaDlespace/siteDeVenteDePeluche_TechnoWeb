@@ -8,66 +8,6 @@
     $msgErreurInscription = "";
 
 
-function userName($userid)
-{
-    try{
-        $db = connectDB();
-        $sql = 'SELECT * FROM users WHERE userid=\''.$userid.'\'';
-        $query = $db->query($sql);
-        $data = $query->fetch();
-        $username = $data['username'];
-        return $username;
-    }
-    catch (PDOException $e){
-        echo ('Erreur: ' .$e->getMessage());
-    }
-}
-
-function name($userid)
-{
-    try{
-        $db = connectDB();
-        $sql = 'SELECT * FROM users WHERE userid=\''.$userid.'\'';
-        $query = $db->query($sql);
-        $data = $query->fetch();
-        $username = $data['name'];
-        return $username;
-    }
-    catch (PDOException $e){
-        echo ('Erreur: ' .$e->getMessage());
-    }
-}
-
-function surname($userid)
-{
-    try{
-        $db = connectDB();
-        $sql = 'SELECT * FROM users WHERE userid=\''.$userid.'\'';
-        $query = $db->query($sql);
-        $data = $query->fetch();
-        $username = $data['surname'];
-        return $username;
-    }
-    catch (PDOException $e){
-        echo ('Erreur: ' .$e->getMessage());
-    }
-}
-
-function password($userid)
-{
-    try{
-        $db = connectDB();
-        $sql = 'SELECT * FROM users WHERE userid=\''.$userid.'\'';
-        $query = $db->query($sql);
-        $data = $query->fetch();
-        $username = $data['password'];
-        return $username;
-    }
-    catch (PDOException $e){
-        echo ('Erreur: ' .$e->getMessage());
-    }
-}
-
 function renvoi_valeur($userid)
 {
     try{
@@ -91,33 +31,113 @@ function renvoi_valeur($userid)
     }
 }
 
-function phoneNumber($userid)
+function modif_userName($username)
 {
     try{
         $db = connectDB();
-        $sql = 'SELECT * FROM users WHERE userid=\''.$userid.'\'';
+        $sql = 'SELECT * FROM users WHERE username=\''.$username.'\'';
         $query = $db->query($sql);
         $data = $query->fetch();
-        $username = $data['phone_number'];
-        return $username;
+
+        $insert = 'INSERT INTO users(username) VALUES \''.$username.'\'';
+        $query = $db->exec($insert);
+        $userid = $db->lastInsertId();
+        $db = null;
+        $_SESSION['userid'] = $userid;
+        return true;
+
     }
     catch (PDOException $e){
-        echo ('Erreur: ' .$e->getMessage());
+        echo ('<br><br><br><br>Erreur: ' .$e->getMessage());
     }
 }
 
-function physicalAddress($userid)
-{
-    try{
-        $db = connectDB();
-        $sql = 'SELECT * FROM users WHERE userid=\''.$userid.'\'';
+
+function validationModif(){
+
+    if (!empty($_POST['validation'])){
+        
+        
+
+        try{
+
+        //$data = array('userid'=>$user);
+                $prenom = $_POST['prenom'];
+                $password = $_POST['password'];
+                $name = $_POST['nom'];
+                $email = $_POST['email'];
+                $phoneNumber = $_POST['phoneNumber'];
+                $physicalAddress = $_POST['address'];
+                $data = [];
+                var_dump($_POST);
+                $userid = $_SESSION['userid'] ;
+                $db = connectDB();
+                //$quantite = $_POST['quantite'];
+
+
+                $set="";
+
+                if (isset($_POST['prenom']) && $_POST['prenom']!=""){ //Celui du form
+                    $set.="username=:username,";//celui bdd puis celui form
+                    $data['username']=$prenom;//celui bdd puis form
+                }
+               if (isset($_POST['password']) && $_POST['password']!=""){ 
+                    $set.="password=:password,";
+                    $data['password']=$password;
+                }
+                if (isset($_POST['email']) && $_POST['email']!=""){
+                    $set.="email:=email,";
+                    $data['email']=$email;
+                }
+                if (isset($_POST['nom']) && $_POST['nom']!=""){
+                    $set.="nom=:name,";
+                    $data['name']=$name;
+                }
+                if (isset($_POST['phoneNumber'])&& $_POST['phoneNumber']!=""){
+                    $set.="phone_number:=phone_number,";
+                    $data['phone_number']=$phoneNumber;
+                }
+                if (isset($_POST['address'])&& $_POST['address']!=""){
+                    $set.="physical_address=:physical_address";
+                    $data['physical_address']=$physicalAddress;
+                }
+                //var_dump($data);
+
+       /* $prenom = $_POST['prenom'];
+        $password = $_POST['password'];
+        $name = $_POST['nom'];
+        $email = $_POST['email'];
+        $phoneNumber = $_POST['phoneNumber'];
+        $physicalAddress = $_POST['adresse'];
+
+        $sql = "UPDATE `users` SET `password`=$password,`surname`=$prenom,`name`=$name,`email_address`=$email,`phone_number`=$phoneNumber,`physical_address`=$physicalAddress WHERE userid=$userId" ;
+
+
+
+
+    UPDATE `users` SET `surname`=dsds wHERE 1
+*/              
+                var_dump($set);
+                $query = 'update users SET '. $set .' where userid=:userid';
+                //$userid = intval($userid);
+               $data['userid']=$userid ;
+                 var_dump($query);
+                 var_dump($data);
+                $stmt =  $db ->prepare($query);
+               $stmt -> execute($data);
+         /*echo($sql);
         $query = $db->query($sql);
         $data = $query->fetch();
-        $username = $data['physical_address'];
-        return $username;
+
+        return true;*/
+
     }
     catch (PDOException $e){
-        echo ('Erreur: ' .$e->getMessage());
+        echo ('<br><br><br><br>Erreur: ' .$e->getMessage());
+    }
+    
+
+
     }
 }
 
@@ -162,5 +182,6 @@ function checIfUserExistAndConnexionWhenSubmitSinscrire(){
     }
 
  }
+
     //$path='"../"'. (string) dirname(__FILE__);
  

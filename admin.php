@@ -7,27 +7,6 @@
     include('modelStore.php');
 
     $tableau = afficherTablePeluches();
-
-    /* if (isset($_GET['ajouterProduit'])){
-    	$nom_produit = $_GET['nom_produit'];
-    	$description = $_GET['description'];
-    	$prix = $_GET['prix'];
-    	$image = $_GET['image'];
-        $ajout_produit = addProduct($nom_produit, $description, $prix, $image);
-        if ($ajout_produit){
-            $msgConfirmation = "Ajout réussi";
-            $tableau = afficherTablePeluches();
-        }
-    }
-
-    if (isset($_GET['supprimerProduit']) && isset($_GET['productid'])){
-        $produitSupprime = deleteProduct($_GET['productid']);
-        if ($produitSupprime){
-            $msgConfirmation = "Suppression réussie";
-            $tableau = afficherTablePeluches();
-        }
-    } */
-
 ?>
 
 <!DOCTYPE html>

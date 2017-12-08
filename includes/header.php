@@ -31,10 +31,7 @@ require_once dirname(__FILE__).'/checkSession.php';
                         }
 
                     ?>
-                    <!-- <div id="panier">
-                        <a href="<?php echo $absoluteDirectoryName; ?>page_panier/index.php"><img src="<?php echo $absoluteDirectoryName; ?>images/panier-ajout.png" id="panierlogo">Panier</a>
-                    </div> -->
-                    <!--<a href="<?php echo $absoluteDirectoryName; ?>pagePresentationDesProduits">Produits</a>-->
+
                     <?php
 
                         if ($sessionid == "visiteur"){
@@ -54,18 +51,11 @@ require_once dirname(__FILE__).'/checkSession.php';
                     }
 
                 ?>
-                
-               
-                    <!-- <a href="<?php echo $absoluteDirectoryName; ?>page_login/index.php" id="login">Authentification</a>
 
-                    <?php if ($sessionid == "6"){
-                        echo('<a id="buttonadmin" href="'.$absoluteDirectoryName.'admin.php">Admin</a>');
-                    } ?> -->
                     
                 </div>
 
 
-                <!-- <a id="session" href="<?php echo $absoluteDirectoryName; ?>page_profil/index.php"> Session :<?php $temp1=returnUserConnection($sessionid);echo $temp1['name']; ?> </a> -->
             </div>
         </header>
     </body>
