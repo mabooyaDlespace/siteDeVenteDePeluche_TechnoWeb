@@ -7,8 +7,8 @@ $absoluteDirectoryName="/sitedeventedepeluche_technoweb/";
 $absoluteDirectoryName="/pathToRoot/";
 exemple: "D:/programmes/Wamp64/www/TP/GitHubTP/"
 
-2)Connecté vous à votre compte phpmyadmin 
-3)Importer votre baseDeDonnee.sql avec vos données préconfigurées.
+2)Connecté vous à votre compte phpmyadmin <br>
+3)Importer votre baseDeDonnee.sql avec vos données préconfigurées.<br>
 4)Taper localhost et votre site est accessible en cliquant sur "sitedeventedepeluche_technoweb"
 
 
